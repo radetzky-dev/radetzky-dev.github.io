@@ -10,9 +10,9 @@
     <style>
         p {
             color: #26b72b;
-            background-color: blue;
+            background-color: rgb(237, 246, 246);
             padding: 5px;
-            border: 1px solid black;
+            border: 1px solid rgb(168, 242, 9);
         }
 
         .warning {
@@ -24,7 +24,7 @@
         }
 
         .warning img {
-            width: 100%;
+            width: 45%;
         }
 
         .warning p {
@@ -35,9 +35,9 @@
         .ombra {
             width: 15em;
             border: 1px solid #333;
-            box-shadow: 8px 8px 5px #444;
+            box-shadow: 8px 8px 5px rgb(68, 68, 68);
             padding: 8px 12px;
-            background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+            background-image: linear-gradient(180deg, #fff, #ddd 50%, #ccc);
         }
     </style>
 </head>
@@ -50,16 +50,16 @@
         elemento che abbia applicato ombra
         h3 con uno style inline
     -->
-    <h2>Questo è un titolo</h2>
+    <h2 class="ombra">Questo è un titolo</h2>
 
 
-    <p>This text will be green. Inline styles take precedence over CSS included externally.</p>
+    <p><strong style="color: black">Lorem Ipsum</strong> è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione. È sopravvissuto non solo a più di cinque secoli, ma anche al passaggio alla videoimpaginazione, pervenendoci sostanzialmente inalterato. Fu reso popolare, negli anni ’60, con la diffusione dei fogli di caratteri trasferibili “Letraset”, che contenevano passaggi del Lorem Ipsum, e più recentemente da software di impaginazione come Aldus PageMaker, che includeva versioni del Lorem Ipsum..</p>
 
-    <p style="color: blue">The <code>style</code> attribute can override it, though.</p>
+    <p style="color: blue">The <code class="ombra">style</code> attribute can override it, though.</p>
 
     <div class="warning">
-        <img src="/media/examples/leopard.jpg" alt="An intimidating leopard.">
-        <p>Beware of the leopard</p>
+        <img src="assets/frutta.jpg" alt="An intimidating leopard.">
+        <p>La frutta <span style="color:blue">fa</span> bene</p>
     </div>
 
 </body>
