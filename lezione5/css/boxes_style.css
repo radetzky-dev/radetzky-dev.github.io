@@ -19,4 +19,13 @@ ul {
   display: block;
 }      
 
+* {
+    box-sizing: border-box;
+  }
+  
+  .img-container {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
  
