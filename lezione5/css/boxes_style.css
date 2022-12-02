@@ -6,16 +6,17 @@ ul {
 
 .block,
 li {
-  border: 2px solid blue;
+  border: 1px solid blue;
   padding: .5em;
 }
 
 ul {
   display: flex;
-  list-style: none;
+  list-style: none; 
 }
 
 .block {
   display: block;
 }      
+
  
