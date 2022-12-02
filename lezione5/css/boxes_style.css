@@ -28,4 +28,18 @@ ul {
     width: 33.33%;
     padding: 5px;
   }
+
+  
+  .boxer-big {
+    float: left;
+    width: 70%;
+    padding: 5px;
+   
+  }
+
+  .boxer-little {
+    float: left;
+    width: 30%;
+    padding: 5px;
+  }
  
