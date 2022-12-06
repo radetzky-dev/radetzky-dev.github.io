@@ -14,13 +14,14 @@ html {
   
   h1 {
     font-size: 4em;
+    text-align: center;
   }
   
   h2 {
     font-size: 3.2em;
   }
   
-  pli {
+  p li {
     font-size: 1.7em;
   }
   
@@ -29,19 +30,17 @@ html {
   /* header and footer */
   
   header, footer {
-    background-colour: teal;
+    background-color: teal;
     height: 10em;
     padding: 2em;
   }
   
-  h1, footer p {
-    margin: -70px;
+  footer p {
+    margin: 0px;
+    font-size: medium;
   }
   
-  h1 {
-    text-align: center;
-    padding: 0.5em 0;
-  }
+
   
   /* main content */
   
