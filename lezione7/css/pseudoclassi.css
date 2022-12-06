@@ -4,6 +4,27 @@ hr {
   border-style: dotted;
 }
 
+html {
+  font-size: larger;
+  color: blue;
+}
+
+p {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+  font-weight: 700;
+}
+
+.first {
+  font-stretch: narrower;
+}
+
+#miaprova {
+  border-color: blueviolet;
+}
+
 /* :any-link */
 .anylinks a:any-link {
   border: 1px solid blue;
