@@ -40,3 +40,30 @@ hr {
 .internalTarget p:target i {
   color: red;
 }
+
+/* Checked */
+.checkedClass div,
+.checkedClass select {
+  margin: 8px;
+}
+
+/* Labels for checked inputs */
+.checkedClass input:checked + label {
+  color: red;
+}
+
+/* Radio element, when checked */
+.checkedClass input[type="radio"]:checked {
+  box-shadow: 0 0 0 3px orange;
+}
+
+/* Checkbox element, when checked */
+.checkedClass input[type="checkbox"]:checked {
+  box-shadow: 0 0 0 3px hotpink;
+}
+
+/* Option elements, when selected */
+.checkedClass option:checked {
+  box-shadow: 0 0 0 3px lime;
+  color: red;
+}
