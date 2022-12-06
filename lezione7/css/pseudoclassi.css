@@ -1,4 +1,10 @@
-/* any link */
+/* General tags */
+hr {
+  border: 2px solid blue;
+  border-style: dotted;
+}
+
+/* :any-link */
 .anylinks a:any-link {
   border: 1px solid blue;
   color: orange;
@@ -8,4 +14,10 @@
 .anylinks a:-webkit-any-link {
   border: 1px solid blue;
   color: orange;
+}
+
+/* :links */
+.onlylinks a:link {
+  background-color: gold;
+  color: green;
 }
