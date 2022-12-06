@@ -1,0 +1,11 @@
+/* any link */
+.anylinks a:any-link {
+  border: 1px solid blue;
+  color: orange;
+}
+
+/* WebKit browsers */
+.anylinks a:-webkit-any-link {
+  border: 1px solid blue;
+  color: orange;
+}
