@@ -17,7 +17,26 @@ hr {
 }
 
 /* :links */
-.onlylinks a:link {
+.onlylinks a:link,
+.onlylinks a:visited {
+  background-color: yellowgreen;
+  color: black;
+}
+
+/* target */
+.internalTarget p:target {
   background-color: gold;
-  color: green;
+}
+
+/* Add a pseudo-element inside the target element */
+.internalTarget p:target::before {
+  font: 70% sans-serif;
+  content: "►";
+  color: limegreen;
+  margin-right: 0.25em;
+}
+
+/* Style italic elements within the target element */
+.internalTarget p:target i {
+  color: red;
 }
