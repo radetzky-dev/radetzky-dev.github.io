@@ -37,22 +37,13 @@
 
         <form class="formclass">
             <p>Iscriviti alla nostra newsletter</p>
-            <label>Nome completo: <input name="firstName" type="text"></label>
+            <label>Nome completo: 
+            <input name="firstName" type="text"></label>
             <label>E-mail: <input name="mail" type="email"></label>
-            <!--
-            TO DO
-           campi  password + conferma password
-        controlli css
-        - invalid CERCHI DI ROSSO 
-        - valid cerchio in verde
-        - focus background giallo
-        - bottone on hover effetto ombra
-        -->
             <label for="password">Scegli la password (min. 8 caratteri):</label>
             <input type="password" id="password" name="password">
             <label for="passwordConfirm"> Conferma la password :</label>
-            <input type="passwordCfr" id="passwordCfr" name="passwordCfr" minlength="8" required>
-
+            <input type="password" id="passwordCfr" name="passwordCfr" minlength="8">
             <input name="scopri" type="button" value="Scopri">
         </form>
     </main>

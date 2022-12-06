@@ -17,7 +17,8 @@ h2 {
   font-size: 3.2em;
 }
 
-p,li {
+p,
+li {
   font-size: 1.7em;
   line-height: 2;
 }
@@ -26,6 +27,29 @@ img {
   margin: 1.2em 2em;
   width: 500px;
   float: right;
+}
+
+label {
+  display: block;
+  margin-top: 2em;
+  margin-left: 2em;
+  padding-top: 2em;
+  font-size: 1.5em;
+}
+
+input:valid {
+  display: block;
+  background-color: whitesmoke;
+  border: none;
+  outline: 2px solid deepskyblue;
+  border-radius: 5px;
+  accent-color: gold;
+  position: relative;
+}
+
+input:invalid {
+  display: block;
+  background-color: red;
 }
 
 /*+++ more specific section styles +++*/
@@ -44,13 +68,12 @@ footer {
 
 /* main content */
 main {
-  padding: 2em; 
+  padding: 2em;
 }
 
 /* formclass */
 .formclass {
   margin: auto;
-  width: 50%;
+  width: 70%;
   padding: 10px;
 }
-
