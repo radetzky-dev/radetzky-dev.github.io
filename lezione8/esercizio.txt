@@ -1,0 +1,8 @@
+Fare una copia
+
+Titolo del vostro sito
+Header con  logo a sinistra (o totale)
+testi significati (giornali exx)
+foto reali non tutte orizzontali \ verticali
+footer con un copyright
+titoli degli articoli cliccabili che portano a un contenuto (articolo.html)
