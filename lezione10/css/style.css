@@ -5,7 +5,37 @@
 *,
 ::after,
 ::before {
-    box-sizing: inherit;
+    box-sizing: in/*nav */
+.header-nav {
+    display: flex;
+    padding: .5em;
+    list-style-type: none;
+    background-color:white;
+    border-radius: .2em;
+}
+
+
+.header-nav > li {
+    margin-top: 0;
+}
+
+
+.header-nav > li > a {
+    display: block;
+    padding: .5em 1em;
+    background-color: #0a5278;
+    color: white;
+    text-decoration: none;
+}
+
+
+.header-nav > li:nth-child(1n+2) {
+    margin-left: .5em;
+}
+
+.header-nav > li.nav-right {
+    margin-left: auto;
+}rit;
 }
 
 body *+* {
@@ -59,8 +89,50 @@ section::after {
     clear: both;
 }
 
-/* classes */
-.centergrid {
-    background-color: blueviolet;
-    display: inline-flex;
+
+
+
+/*nav */
+.header-nav {
+    display: flex;
+    padding: .5em;
+    list-style-type: none;
+    background-color:#0a5278;
+    }
+
+
+.header-nav > li {
+    margin-top: 0;
 }
+
+
+.header-nav > li > a {
+    display: block;
+    padding: .5em 1em;
+    background-color: white;
+    color: #0a5278;
+    text-decoration: none;
+   }
+
+
+.header-nav > li:nth-child(1n+2) {
+    margin-left: .5em;
+}
+
+.header-nav > li.nav-right {
+    margin-left: auto;
+}
+
+/* aside */
+.centergrid {
+    background-color: #0a5278;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .first { grid-area: 1 / 1 / 2 / 2; }
+    .second { grid-area: 1 / 2 / 2 / 3; }
+    .third { grid-area: 1 / 3 / 2 / 4; }
