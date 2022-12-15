@@ -9,7 +9,7 @@
 </head>
 <style>
     :root {
-        box-sizing: border-box; 
+        box-sizing: border-box;
     }
 
     body {
@@ -20,8 +20,8 @@
     .container {
         margin: 0 auto;
         display: flex;
-         justify-content: center;
-         perspective: 400px; 
+        justify-content: center;
+        perspective: 400px;
     }
 
     .card {
@@ -29,15 +29,30 @@
         max-width: 20em;
         background-color: white;
         margin-right: 10px;
-        box-shadow: 5px 15px 25px -16px #000000; 
+        box-shadow: 5px 15px 25px -16px #000000;
     }
 
     .container .card:last-child {
-         margin-right: initial;
+        margin-right: initial;
     }
 
     .card img {
         max-width: 100%;
+    }
+
+    /* TRANSFORM */
+
+    .container {
+        perspective: 400px;
+    }
+
+    .container .card:first-child {
+        transform: rotateY(30deg);
+        transform-style: preserve-3d;
+    }
+
+    .container .card:nth-child(3) {
+        opacity: 0.5;
     }
 </style>
 
