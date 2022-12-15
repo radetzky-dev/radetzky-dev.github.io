@@ -154,21 +154,26 @@ footer {
   grid-column-gap: 10px;
   grid-row-gap: 0px;
   border: 1px solid var(--black-color);
+  text-align: justify;
+  align-items: self-end;
 }
 
 .first {
+  border: 1px solid;
   grid-area: 1 / 1 / 2 / 2;
 }
 .second {
+  border: 1px solid;
   grid-area: 1 / 2 / 2 / 3;
 }
 .third {
+  border: 1px solid;
   grid-area: 1 / 3 / 2 / 4;
 }
 
 .centergrid:nth-child(n) {
   border-radius: 5px;
-  padding: 20px;
+  padding: 10px;
 }
 
 aside {
