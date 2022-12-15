@@ -1,0 +1,15 @@
+$myFont: Helvetica, sans-serif;
+$myColor: blue;
+$myFontSize: 12px;
+$otherColor: red;
+
+body {
+  font-family: $myFont;
+  font-size: $myFontSize;
+  color: $myColor;
+}
+
+p {
+  font-family: $myFont;
+  color: $otherColor;
+}
