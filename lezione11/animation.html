@@ -8,37 +8,47 @@
     <title>Animation</title>
 </head>
 <style>
-    .elm2 {
-        border: 10px solid;
-        border-radius: 50%;
-        width: 120px;
-        height: 140px;
-    }
 
-    .elm2 {
-        animation-name: over-and-back;
-        animation-duration: 6s;
-    }
-
-    @keyframes over-and-back {
-        0% {
-            background-color: hsl(271, 49%, 54%, 0);
-            position: relative;
-            left: 0;
+        .elm2 {
+            border: 10px solid;
+            border-radius: 50%;
+            width: 120px;
+            height: 140px;
         }
 
-        50% {
-            background-color: hsl(271, 49%, 54%, 1);
-            position: relative;
-            left: 350px;
+        .elm2 {
+            animation-name: over-and-back;
+            animation-duration: 6s;
         }
 
-        100% {
-            background-color: hsl(271, 49%, 54%, 0);
-            position: relative;
-            left: 0;
+        @keyframes over-and-back {
+            0% {
+                background-color: hsl(271, 49%, 54%, 0);
+                position: relative;
+                left: 0;
+            }
+
+            50% {
+                background-color: hsl(271, 49%, 54%, 1);
+                position: relative;
+                border-radius: 20%;
+                left: 350px;
+                width: 200px;
+            }
+
+            80% {
+                background-color: hsl(271, 49%, 54%, 1);
+                position: relative;
+                left: 550px;
+            }
+
+            100% {
+                background-color: hsl(271, 49%, 54%, 0);
+                position: relative;
+                left: 0;
+            }
         }
-    }
+
 </style>
 
 <body>
