@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esempi bootstrap</title>
+    <link rel="stylesheet" href="../lezione12/css/mybootlocal.css" />
+</head>
+<style>
+    .bdflex div {
+        background-color: lightblue;
+        border: 1px solid rgba(76, 11, 206, 0.15);
+    }
+</style>
+
+<body>
+    <div class="d-none d-xl-block">Questo si vede quando GRANDE</div>
+    <div class="d-print-none">Screen Only (Hide on print only)</div>
+    <div class="d-none d-print-block">Print Only (Hide on screen only)</div>
+    <div class="d-none d-lg-block d-print-block">Hide up to large on screen, but always show on print</div>
+
+
+
+    <div class="bdflex">
+        <div class="d-flex p-2">I'm a flexbox container!</div>
+        <div class="d-inline-flex p-2">I'm an inline flexbox container!</div>
+
+        <div class="d-flex flex-row mb-3">
+            <div class="p-2">Flex item 1</div>
+            <div class="p-2">Flex item 2</div>
+            <div class="p-2">Flex item 3</div>
+        </div>
+        <div class="d-flex flex-row-reverse">
+            <div class="p-2">Flex item 1</div>
+            <div class="p-2">Flex item 2</div>
+            <div class="p-2">Flex item 3</div>
+        </div>
+
+        <div class="d-flex flex-column mb-3">
+            <div class="p-2">Flex item 1</div>
+            <div class="p-2">Flex item 2</div>
+            <div class="p-2">Flex item 3</div>
+        </div>
+        <div class="d-flex flex-column-reverse">
+            <div class="p-2">Flex item 1</div>
+            <div class="p-2">Flex item 2</div>
+            <div class="p-2">Flex item 3</div>
+        </div>
+
+        <div class="d-flex justify-content-start">
+            <div class="p-2">Flex item 1</div>
+            <div class="p-2">Flex item 2</div>
+            <div class="p-2">Flex item 3</div>
+        </div>
+        <div class="d-flex justify-content-end">
+            <div class="p-2">Flex item 1</div>
+            <div class="p-2">Flex item 2</div>
+            <div class="p-2">Flex item 3</div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="p-2">Flex item 1</div>
+            <div class="p-2">Flex item 2</div>
+            <div class="p-2">Flex item 3</div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div class="p-2">Flex item 1</div>
+            <div class="p-2">Flex item 2</div>
+            <div class="p-2">Flex item 3</div>
+        </div>
+        <div class="d-flex justify-content-around">
+            <div class="p-2">Flex item 1</div>
+            <div class="p-2">Flex item 2</div>
+            <div class="p-2">Flex item 3</div>
+        </div>
+        <div class="d-flex justify-content-evenly">
+            <div class="p-2">Flex item 1</div>
+            <div class="p-2">Flex item 2</div>
+            <div class="p-2">Flex item 3</div>
+        </div>
+
+
+        <div class="d-flex">
+            <div class="p-2 flex-fill">Flex item with a lot of content</div>
+            <div class="p-2 flex-fill">Flex item</div>
+            <div class="p-2 flex-fill">Flex item</div>
+        </div>
+
+        <div class="d-flex">
+            <div class="p-2 flex-grow-1">Flex item</div>
+            <div class="p-2">Flex item</div>
+            <div class="p-2">Third flex item</div>
+        </div>
+
+        <div class="d-flex">
+            <div class="p-2 w-100">Flex item</div>
+            <div class="p-2 flex-shrink-1">Flex item</div>
+        </div>
+
+        <div class="d-flex mb-3">
+            <div class="p-2">Flex item</div>
+            <div class="p-2">Flex item</div>
+            <div class="p-2">Flex item</div>
+          </div>
+          
+          <div class="d-flex mb-3">
+            <div class="me-auto p-2">Flex item</div>
+            <div class="p-2">Flex item</div>
+            <div class="p-2">Flex item</div>
+          </div>
+          
+          <div class="d-flex mb-3">
+            <div class="p-2">Flex item</div>
+            <div class="p-2">Flex item</div>
+            <div class="ms-auto p-2">Flex item</div>
+          </div>
+
+          <div class="d-flex align-items-start flex-column mb-3" style="height: 200px;">
+            <div class="mb-auto p-2">Flex item</div>
+            <div class="p-2">Flex item</div>
+            <div class="p-2">Flex item</div>
+          </div>
+          
+          <div class="d-flex align-items-end flex-column mb-3" style="height: 200px;">
+            <div class="p-2">Flex item</div>
+            <div class="p-2">Flex item</div>
+            <div class="mt-auto p-2">Flex item</div>
+          </div>
+
+          <div class="d-flex flex-nowrap">
+            <div class="order-3 p-2">First flex item</div>
+            <div class="order-2 p-2">Second flex item</div>
+            <div class="order-1 p-2">Third flex item</div>
+          </div>
+          <hr>
+
+          <div class="d-flex">
+            <div class="flex-shrink-0">
+              <img src="https:via.placeholder.com/400" alt="immagine">
+            </div>
+            <div class="flex-grow-1 ms-3">
+              This is some content from a media component. You can replace this with any content and adjust it as needed.
+            </div>
+          </div>
+
+
+          <div class="d-flex align-items-center">
+            <div class="flex-shrink-0">
+                <img src="https:via.placeholder.com/400" alt="immagine">
+            </div>
+            <div class="flex-grow-1 ms-3">
+              This is some content from a media component. You can replace this with any content and adjust it as needed.
+            </div>
+          </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
