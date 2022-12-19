@@ -11,28 +11,13 @@
 
 <body>
     <div class="container">
-        <!-- Site name -->
-        <div class="px-2 py-2 my-2 text-center">
-            <h1 class="display-3 fw-bold">Il corriere del developer</h1>
-            <div class="col-lg-6 mx-auto">
-                <p class="lead mb-4">Tutte le notizie sul mondo di Bootstrap</p>
-            </div>
-        </div>
-        <!-- navbar -->
-
-        <nav class="navbar bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand">Navbar</a>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
-        </nav>
 
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar w/ text</a>
+                <a class="navbar-brand" href="#">
+                    <img src="assets/Mediamodifier-Design.svg" alt="Corriere del developer" width="30" height="30">
+                </a>
+                <a class="navbar-brand fw-bold" href="#">Corriere del developer</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                     aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -43,82 +28,83 @@
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
+                            <a class="nav-link" href="#">Articoli</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
+                            <a class="nav-link" href="#">Chi siamo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Iscrivti</a>
                         </li>
                     </ul>
                     <span class="navbar-text">
                         <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
+                            <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Cerca">
+                            <button class="btn btn-outline-success" type="submit">Cerca</button>
                         </form>
                     </span>
                 </div>
             </div>
         </nav>
 
-        <nav class="navbar navbar-expand  bg-primary bg-gradient mb-2" aria-label="Second navbar example">
-            <div class="container-fluid" style="background-color: #4607e7;">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarsExample02">
-                    <ul class="navbar-nav me-auto p-3">
-                        <li class="nav-item ">
-                            <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
-                        </li>
-                        <a class="nav-link active text-light" aria-current="page" href="#">Guide</a>
-                        </li>
-                        <a class="nav-link active text-light" aria-current="page" href="#">Recenzioni</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" href="#">Link</a>
-                        </li>
-                    </ul>
+        <section>
+            <div class="row justify-content-start">
+                <div class="col-8">
+                    <!-- main title -->
+                    <div class="card border-0 mb-2">
+                        <div class="card-body">
+                            <h1 class="display-2 fw-bold">L'Argentina vince i mondiali</h1>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                        <img src="assets/messi.jpg" class="card-img-bottom" alt="...">
+                    </div>
+                    <!-- second article -->
+                    <div class="d-flex align-items-center mb-2">
+                        <div class="flex-grow-1 ms-3">
+                            <h1 class="display-6 fw-bold">Titolo principale del giornale</h1>
+                            This is some content from a media component. You can replace this with any content and adjust it as
+                            needed. This is some content from a media component. You can replace this with any content and
+                            adjust it as needed.This is some content from a media component. You can replace this with any
+                            content and adjust it as needed.This is some content from a media component. You can replace this
+                            with any content and adjust it as needed.This is some content from a media component. You can
+                            replace this with any content and adjust it as needed.
+                            <div>
+                                <p>Serie di link | links | links</p>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0">
+                            <img src="assets/juve.jpg" alt="immagine" width="250px">
+                        </div>
+                    </div>
+                    <hr class="border opacity-50">
+          
                 </div>
-
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Cerca</button>
-                </form>
-
+                <!-- side bar-->
+                <div class="col-4 border-start">
+                    <img src="assets/dimaria.jpg" alt="immagine" width="100%"/>
+                    <h1 class="display-5 fw-bold">Di Maria stellare!
+                    </h1>
+                    <p>Predicando il mantra che "il web è per tutti", Mozilla ha
+                        pubblicato una visione per l'evoluzione del web che sottolinea
+                        l'apertura e la sicurezza, con l'azienda che mira a colmare le
+                        carenze in aree tra cui privacy e complessità. Il documento di
+                        visione copre ciò che Mozilla vorrebbe vedere accadere e
+                        delinea il lavoro necessario per raggiungere questi obiettivi.
+                        Pur affermando che il Web è diventato la piattaforma di
+                        comunicazione più importante del mondo, il CTO di FireFox di
+                        Mozilla Eric Rescoria e il Distinguished Engineer Bobby Holley
+                        hanno scritto che il Web ha problemi reali, con persone
+                        spiate, prive di potere e gravate da esperienze lente ed
+                        eccessivamente complesse.</p>
+                    
+                </div>
             </div>
-        </nav>
+        </section>
 
         <main>
-            <div class="card border-0">
-                <div class="card-body">
-                  <h1 class="display-2 fw-bold">Argentina vince i mondiali</h1>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-                <img src="assets/messi.jpg" class="card-img-bottom" alt="...">
-              </div>
 
-            <!-- main title -->
-            <div class="d-flex align-items-center mb-2">
-                <div class="flex-grow-1 ms-3">
-                    <h1 class="display-4 fw-bold">Titolo principale del giornale</h1>
-                    This is some content from a media component. You can replace this with any content and adjust it as
-                    needed. This is some content from a media component. You can replace this with any content and
-                    adjust it as needed.This is some content from a media component. You can replace this with any
-                    content and adjust it as needed.This is some content from a media component. You can replace this
-                    with any content and adjust it as needed.This is some content from a media component. You can
-                    replace this with any content and adjust it as needed.
-                    <div>
-                        <p>Serie di link | links | links</p>
-                    </div>
-                </div>
-                <div class="flex-shrink-0">
-                    <img src="https:via.placeholder.com/600x400" alt="immagine">
-                </div>
-            </div>
-            <hr class="border opacity-50">
 
             <!-- two artciles -->
             <div class="row mb-3 text-justify">
@@ -233,7 +219,7 @@
                                     <a href="#" class="card-link">Another link</a>
                                 </div>
                             </div>
-                     
+
                         </div>
                     </div>
                 </div>
@@ -280,21 +266,15 @@
 
                 </div>
                 <div class="col-md-4 themed-grid-col">
-                    <img src="https://via.placeholder.com/200" alt="immagine" />
-                    <p class="h4">Mozilla svela la visione per l'evoluzione del Web
-                    </p>
-                    Predicando il mantra che "il web è per tutti", Mozilla ha
-                    pubblicato una visione per l'evoluzione del web che sottolinea
-                    l'apertura e la sicurezza, con l'azienda che mira a colmare le
-                    carenze in aree tra cui privacy e complessità. Il documento di
-                    visione copre ciò che Mozilla vorrebbe vedere accadere e
-                    delinea il lavoro necessario per raggiungere questi obiettivi.
-                    Pur affermando che il Web è diventato la piattaforma di
-                    comunicazione più importante del mondo, il CTO di FireFox di
-                    Mozilla Eric Rescoria e il Distinguished Engineer Bobby Holley
-                    hanno scritto che il Web ha problemi reali, con persone
-                    spiate, prive di potere e gravate da esperienze lente ed
-                    eccessivamente complesse.
+                    <div class="card text-bg-dark">
+                        <img src="assets/messi.jpg" class="card-img" alt="...">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
                 </div>
                 <hr class="border opacity-50">
                 <div class="row mb-3 text-justify">
