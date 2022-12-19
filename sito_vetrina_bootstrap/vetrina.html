@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,8 +19,48 @@
             </div>
         </div>
         <!-- navbar -->
-        <nav class="navbar navbar-expand  bg-primary bg-gradient mb-2" aria-label="Second navbar example">
+
+        <nav class="navbar bg-light">
             <div class="container-fluid">
+                <a class="navbar-brand">Navbar</a>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar w/ text</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                    </ul>
+                    <span class="navbar-text">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </span>
+                </div>
+            </div>
+        </nav>
+
+        <nav class="navbar navbar-expand  bg-primary bg-gradient mb-2" aria-label="Second navbar example">
+            <div class="container-fluid" style="background-color: #4607e7;">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -41,23 +82,26 @@
                     </ul>
                 </div>
 
-                <div class="me-auto p-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="" class="bi bi-search"
-                        viewBox="0 0 16 16">
-                        <path
-                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                    </svg>
-                </div>
-           
-                    <form>
-                        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-                    </form>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Cerca</button>
+                </form>
+
             </div>
         </nav>
 
         <main>
-             <!-- main title -->
-             <div class="d-flex align-items-center mb-2">
+            <div class="card border-0">
+                <div class="card-body">
+                  <h1 class="display-2 fw-bold">Argentina vince i mondiali</h1>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+                <img src="assets/messi.jpg" class="card-img-bottom" alt="...">
+              </div>
+
+            <!-- main title -->
+            <div class="d-flex align-items-center mb-2">
                 <div class="flex-grow-1 ms-3">
                     <h1 class="display-4 fw-bold">Titolo principale del giornale</h1>
                     This is some content from a media component. You can replace this with any content and adjust it as
@@ -75,7 +119,7 @@
                 </div>
             </div>
             <hr class="border opacity-50">
-   
+
             <!-- two artciles -->
             <div class="row mb-3 text-justify">
                 <div class="col-6 themed-grid-col">
@@ -100,14 +144,14 @@
                     aggiornamenti e del supporto tecnico, ha affermato la società.
                 </div>
             </div>
-           
-               
+
+
             <hr class="border opacity-50">
             <!-- banner 1-->
             <a href="https://www.quellocheconta.gov.it/it/">
                 <img src="https://www.quellocheconta.gov.it/export/sites/sitopef/modules/img/news/news100/Banner_Frame.jpg"
                     alt="img1" class="media-ban" width="100%" /></a>
-               
+
             <hr class="border opacity-50">
 
             <!-- two articles and a photo right -->
@@ -169,14 +213,27 @@
                             dati necessarie al runtime di Angular.
                         </div>
                         <div class="col-6 themed-grid-col">
-                            <h4>.NET Core 3.1 di Microsoft si avvicina alla fine</h4>
-                            <img src="https:via.placeholder.com/200" alt="img1" /><br>
-                            .NET Core 3.1 di Microsoft, una versione del framework di sviluppo
-                            software multipiattaforma open source di Microsoft pubblicato a
-                            dicembre 2019, non sarà più supportato a partire dal 13 dicembre
-                            2022. .NET Core 3.1 raggiunge lo stato di fine supporto quel
-                            giorno, con Microsoft che interrompe la manutenzione degli
-                            aggiornamenti e del supporto tecnico, ha affermato la società.
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                    <a href="#" class="card-link">Card link</a>
+                                    <a href="#" class="card-link">Another link</a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                    <a href="#" class="card-link">Card link</a>
+                                    <a href="#" class="card-link">Another link</a>
+                                </div>
+                            </div>
+                     
                         </div>
                     </div>
                 </div>
@@ -187,33 +244,37 @@
                 <div class="col-md-8 themed-grid-col">
                     <div class="row mb-3 text-justify">
                         <div class="col-4 themed-grid-col">
-                            <h4>TypeScript compie 10 anni</h4>
-                            <img src="https:via.placeholder.com/200" alt="img1" /><br>
-                            Dopo essere stato inizialmente accolto con scetticismo, il
-                            linguaggio di programmazione TypeScript di Microsoft, che ha
-                            portato i tipi statici nello sviluppo di JavaScript, ha resistito
-                            alla prova del tempo, ha scritto un funzionario Microsoft lo
-                            scorso fine settimana.
+                            <div class="card">
+                                <img src="https:via.placeholder.com/200" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                    <a href="#">Go somewhere</a>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-4 themed-grid-col">
-                            <h4>Internet Explorer raggiunge la fine della linea</h4>
-                            <img src="https:via.placeholder.com/200" alt="img1" /><br>
-                            Il browser Web Internet Explorer legacy di Microsoft, che ha
-                            navigato su Internet per quasi 27 anni , è stato ufficialmente
-                            ritirato dal 15 giugno. La versione 11 del browser non è più
-                            supportata, ha annunciato Microsoft. Nei prossimi mesi, l'apertura
-                            di Internet Explorer reindirizzerà progressivamente gli utenti al
-                            nuovo browser Microsoft Edge.
+                            <div class="card">
+                                <img src="https:via.placeholder.com/200" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                    <a href="#">Go somewhere</a>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-4 themed-grid-col">
-                            <h4>Internet Explorer raggiunge la fine della linea</h4>
-                            <img src="https:via.placeholder.com/200" alt="img1" /><br>
-                            Il browser Web Internet Explorer legacy di Microsoft, che ha
-                            navigato su Internet per quasi 27 anni , è stato ufficialmente
-                            ritirato dal 15 giugno. La versione 11 del browser non è più
-                            supportata, ha annunciato Microsoft. Nei prossimi mesi, l'apertura
-                            di Internet Explorer reindirizzerà progressivamente gli utenti al
-                            nuovo browser Microsoft Edge.
+                            <div class="card">
+                                <img src="https:via.placeholder.com/200" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                    <a href="#">Go somewhere</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
