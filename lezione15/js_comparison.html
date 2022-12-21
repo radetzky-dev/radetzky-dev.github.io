@@ -55,11 +55,30 @@
         //operatore ternario  ternary
         const age = 26;
         const beverage = age >= 21 ? "Beer" : "Juice";
-        console.log("Puoi bere "+beverage); // "Beer"
+        console.log("Puoi bere " + beverage); // "Beer"
 
         var legalAge = 19;
-        var canDrink = legalAge <18 ? "Coca cola" : "Birra";
-        console.log("Puoi bere "+canDrink); // "Beer"
+        var canDrink = legalAge < 18 ? "Coca cola" : "Birra";
+        console.log("Puoi bere " + canDrink); // "Beer"
+
+        //switch
+        const expr = 'Apple';
+        switch (expr) {
+            case 'Oranges':
+                console.log('Oranges are $0.59 a pound.');
+                break;
+            case 'Apple':
+                console.log ('Apple are free');
+                break;
+            case 'Mangoes':
+            case 'Papayas':
+                console.log('Mangoes and Papayas are $2.79 a pound.');
+                // expected output: "Mangoes and papayas are $2.79 a pound."
+                break;
+            default:
+                console.log(`Sorry, we are out of ${expr}.`);
+        }
+
 
     </script>
 
