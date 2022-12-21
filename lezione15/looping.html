@@ -23,7 +23,7 @@
 
         let myFavoriteCats = 'My cats are called ';
 
-        let i = 0;
+        i = 0;
 
         while (i < cats.length) {
             if (i === cats.length - 1) {
@@ -39,12 +39,35 @@
 
         console.log('*****');
 
+        myFavoriteCats = 'My cats are called ';
+
+        i = 0;
+
+        do {
+            if (i === cats.length - 1) {
+                myFavoriteCats += `and ${cats[i]}.`;
+            } else {
+                myFavoriteCats += `${cats[i]}, `;
+            }
+
+            i++;
+        } while (i < cats.length);
+
+        console.log(myFavoriteCats);
+
+        console.log('*****');
+
         var myNum = 10;
         for (let i = 1; i <= 5; i++) {
             console.log(`Incremento ${myNum} di 1 da ` + myNum);
             myNum++;
         }
         console.log("Valore finale " + myNum);
+
+        console.log("timeout...");
+        setTimeout(() => { console.log("this is the first message") }, 5000);
+        setTimeout(() => { console.log("this is the second message") }, 3000);
+        setTimeout(() => { console.log("this is the third message") }, 1000);
     </script>
 
 </body>
