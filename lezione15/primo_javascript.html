@@ -13,6 +13,9 @@
     <h1>La mia pagina</h1>
 
     <script>
+        //costanti
+        const myConstVal = 5;
+
         //Declare my vars and their types
         var myFirstVariable = "hello";
         let mySecondVar = "world"; //String
@@ -35,6 +38,8 @@
         let mySecondNum = 7;
         let my3Num = 2;
 
+        myFirstNum = 8;  //change value
+
         console.log ("myFirstNum "+myFirstNum);
         myFirstNum++;
         console.log ("myFirstNum "+myFirstNum);
@@ -54,6 +59,9 @@
         console.log ("Media sbagliata "+mediaSbagliata);
         var mediaOk = (myFirstNum+mySecondNum+my3Num)/3;
         console.log ("Media corretta "+mediaOk);
+
+        var finalResult = mediaOk / myConstVal;
+        console.log ("Result "+finalResult);
 
         /*
         Questo è
