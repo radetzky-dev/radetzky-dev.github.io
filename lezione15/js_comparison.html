@@ -33,7 +33,7 @@
             console.log("Sono diversi");
         }
 
-        var num = 5;
+        var num = 7;
         var fakeNum = 6;
 
         console.log("Analizzo " + num + " e " + fakeNum);
@@ -45,6 +45,21 @@
             console.log("Sono uguali");
         }
 
+        console.log("Analizzo " + num + " e " + fakeNum);
+        if (num >= fakeNum) {
+            console.log(num + " è maggiore uguale di " + fakeNum);
+        } else {
+            console.log(fakeNum + " è maggiore di " + num);
+        }
+
+        //operatore ternario  ternary
+        const age = 26;
+        const beverage = age >= 21 ? "Beer" : "Juice";
+        console.log("Puoi bere "+beverage); // "Beer"
+
+        var legalAge = 19;
+        var canDrink = legalAge <18 ? "Coca cola" : "Birra";
+        console.log("Puoi bere "+canDrink); // "Beer"
 
     </script>
 
