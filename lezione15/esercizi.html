@@ -36,7 +36,13 @@
         var anni = annoCorrente - annoNascita;
         console.log("Anni:" + anni);
         var cento = 100 - anni;
-        console.log("Quanti anni mancano per arriva a 100 anni? " + cento);
+
+        if (cento <= 0) {
+            console.log("Sei ULTRACENTENARIO complimenti!");
+        } else {
+            console.log("Per arrivare a 100 anni ti mancano " + cento + " anni.");
+        }
+
 
         //Esercizio 3
         /*Scrivi un programma che dato un numero stampi la tabellina corrispondente.
@@ -74,7 +80,77 @@
         Variante:
         Scrivere una versione che anziché giorni della settimana, visualizzi i nomi dei mesi.
         */
+        const giorno = prompt("Inserisci un numero del giorno della settimana");
+        switch (giorno) {
+            case "1":
+                console.log("Lunedì");
+                break;
+            case "2":
+                console.log("martedì");
+                break;
+            case "3":
+                console.log("mercoledì");
+                break;
+            case "4":
+                console.log("giovedì");
+                break;
+            case "5":
+                console.log("venerdì");
+                break;
+            case "6":
+                console.log("sabato");
+                break;
+            case "7":
+                console.log("domenica");
+                break;
+            default:
+                console.log("Giorno della settimana non valido")
+        }
 
+
+
+        const mese = prompt("Inserisci un numero del mese");
+        switch (mese) {
+            case "1":
+                console.log("Gennaio");
+                break;
+            case "2":
+                console.log("Febbraio");
+                break;
+            case "3":
+                console.log("Marzo");
+                break;
+            case "4":
+                console.log("Aprile");
+                break;
+            case "5":
+                console.log("Maggio");
+                break;
+            case "6":
+                console.log("Giugno");
+                break;
+            case "7":
+                console.log("Luglio");
+                break;
+            case "8":
+                console.log("Agosto");
+                break;
+            case "9":
+                console.log("Settembre");
+                break;
+            case "10":
+                console.log("Ottobre");
+                break;
+            case "11":
+                console.log("Novembre");
+                break;
+            case "12":
+                console.log("Dicembre");
+                break;
+
+            default:
+                console.log("Mese non valido")
+        }
 
 
     </script>
