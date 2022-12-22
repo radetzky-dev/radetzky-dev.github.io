@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+</head>
+
+<body>
+    <script>
+        const today = new Date();
+        const birthday = new Date("December 17, 1995 03:24:00"); // DISCOURAGED: may not work in all runtimes
+        const birthday2 = new Date("1995-12-17T03:24:00"); // This is ISO8601-compliant and will work reliably
+        const birthday3 = new Date(1995, 11, 17); // the month is 0-indexed
+        const birthday4 = new Date(1995, 11, 17, 3, 24, 0);
+        const birthday5 = new Date(628021800000); // passing epoch timestamp
+
+        console.log(birthday);
+        console.log(birthday2);
+        console.log(birthday3);
+        console.log(birthday4);
+        console.log(birthday5);
+
+        const date = new Date("2022-12-22T23:50:21.817Z");
+        console.log(date.toString()); // Tue May 12 2020 18:50:21 GMT-0500 (Central Daylight Time)
+        console.log(date.toDateString()); // Tue May 12 2020
+        console.log(date.toTimeString()); // 18:50:21 GMT-0500 (Central Daylight Time)
+
+        console.log(date.toLocaleString()); // 5/12/2020, 6:50:21 PM
+        console.log(date.toLocaleDateString()); // 5/12/2020
+        console.log(date.toLocaleTimeString()); // 6:50:21 PM
+
+        function formatDate(date) {
+            var d = new Date(date),
+                month = '' + (d.getMonth() + 1),
+                day = '' + d.getDate(),
+                year = d.getFullYear();
+
+            if (month.length < 2)
+                month = '0' + month;
+            if (day.length < 2)
+                day = '0' + day;
+
+            return [day, month, year].join('-');
+        }
+
+        console.log(formatDate('Fri Dec 22,2022'));
+
+        const todayOk = new Date();
+
+        console.log (todayOk);
+
+        console.log ('Oggi è '+formatDate(todayOk));
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Data e ora</title>
+</head>
+
+<body>
+    <script>
+        function formatDate(date) {
+            var d = new Date(date),
+                month = '' + (d.getMonth() + 1),
+                day = '' + d.getDate(),
+                year = d.getFullYear();
+
+            if (month.length < 2)
+                month = '0' + month;
+            if (day.length < 2)
+                day = '0' + day;
+
+            return [day, month, year].join('-');
+        }
+
+        function cheOreSono(date) {
+            var d = new Date(date),
+                ora = '' + (d.getHours()),
+                minuti = '' + d.getMinutes(),
+                secondi = d.getSeconds();
+
+                ora = Number(ora);
+                minuti = Number(minuti);
+                secondi = Number(secondi);
+               
+            if (ora.length < 10) { ora = '0' + ora; }
+            if (minuti.length < 10) { minuti = '0' + minuti; }
+            if (secondi.length < 10) { secondi = '0' + secondi; }
+
+            return [ora, minuti, secondi].join(':');
+
+        }
+
+        const todayOk = new Date();
+        console.log(todayOk);
+        console.log('Oggi è ' + formatDate(todayOk));
+        //todo che ore sono
+        console.log('Sono le ' + cheOreSono(todayOk));
+
+    </script>
+
+</body>
+
+</html>
