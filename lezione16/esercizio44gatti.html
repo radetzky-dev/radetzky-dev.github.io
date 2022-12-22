@@ -25,6 +25,18 @@
   Per l'arrotondamento ti consiglio di non usare Math.round (arrotonda all'intero superiore solo da .5 in su),
   utilizza Math.ceil (arrotonda sempre all'intero superiore).
         */
+
+        var gattiTot = prompt("Quanti gatti ci sono?");
+        var gattiFila = prompt("Quanti gatti ci sono per fila?");
+        var nFile = Math.ceil(gattiTot/gattiFila);
+        var gattiMancanti = gattiTot % gattiFila;
+        if(gattiMancanti == 0){
+            console.log("Numero di file: " + nFile)
+        }
+        else{
+            var gattiMancanti = gattiFila - gattiMancanti;
+            console.log("Numero di file = " + nFile + " gatti mancanti = " + gattiMancanti)
+        }
     </script>
 
 </body>
