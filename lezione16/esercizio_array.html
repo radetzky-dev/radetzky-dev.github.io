@@ -1,20 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Array</title>
 </head>
+
 <body>
 
     <script>
         /*
         1- creare un array di 5 elementi string e  mostrarlo, poi cancellarne uno e mostrae che è stato cancellato
+        */
+        var myColor = ["red", "yellow", "green", "grey", "blue"];
+        console.log("START: " + myColor)
+
+        var tolto = myColor.splice(2, 1);
+        console.log("Tolgo " + tolto);
+
+        if (myColor.indexOf(tolto) < 0) {
+            console.log("Confermo che " + tolto + " non è presente nell'array");
+        } else {
+            console.log(tolto + " è ANCORA presente nell'array");
+        }
+
+        var coloreAggiunto = "puffo";
+        var coloreTolto = myColor.splice(1, 1, coloreAggiunto);
+        console.log("Ho sostituito " + coloreTolto + " con " + coloreAggiunto);
+        console.log("FINISH: " + myColor)
+
+
+        /*
         2- creare un array di 7 numeri -> sommarli e fornire il risultato, fare la media e fornire risultato
         */
+        var numbers = [4, 6, 8, 45, 12, 1, 14];
+        var counter = 0;
+        var somma = 0;
+        var sommaSecondoModo = 0;
+        console.log("Numeri tot " + numbers.length);
+
+        //Tre modi per eseguire un ciclo per estrarre i dati
+
+        //primo modo
+        while (counter < numbers.length) {
+            console.log("Aggiungo " + numbers[counter]);
+            somma = somma + numbers[counter];
+            counter++;
+        }
+
+        //secondo modo
+        for (let i = 0; i < numbers.length; i++) {
+            console.log(numbers[i]);
+        }
+
+        //modo più veloce
+        for (const numero of numbers) {
+            console.log("Aggiunto " + numero);
+            sommaSecondoModo = sommaSecondoModo + numero;
+        }
+
+        console.log("La mia somma è " + somma);
+        console.log("La mia somma (test) è " + sommaSecondoModo);
+        var media = somma / numbers.length;
+        console.log("La mia media è " + media);
 
     </script>
-    
+
 </body>
+
 </html>
