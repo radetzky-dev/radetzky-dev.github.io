@@ -24,22 +24,56 @@
             return [day, month, year].join('-');
         }
 
+        function quantoMancaACapodanno(date) {
+            var d = new Date(date),
+                month = '' + (d.getMonth() + 1),
+                day = '' + d.getDate(),
+                year = d.getFullYear();
+
+            if (month.length < 2)
+                month = '0' + month;
+            if (day.length < 2)
+                day = '0' + day;
+
+            //  22-12-2022  11-01-2022  01-02-2023
+            return [day, month, year].join('-');
+        }
+
         function cheOreSono(date) {
             var d = new Date(date),
                 ora = '' + (d.getHours()),
                 minuti = '' + d.getMinutes(),
                 secondi = d.getSeconds();
 
-                ora = Number(ora);
-                minuti = Number(minuti);
-                secondi = Number(secondi);
-               
-            if (ora.length < 10) { ora = '0' + ora; }
-            if (minuti.length < 10) { minuti = '0' + minuti; }
-            if (secondi.length < 10) { secondi = '0' + secondi; }
+                ora = ""+ora;
+                minuti = ""+minuti;
+                secondi = ""+secondi;
+            
+            if (ora.length < 2) { ora = '0' + ora; }
+            if (minuti.length < 2) { minuti = '0' + minuti; }
+            if (secondi.length < 2) { secondi = '0' + secondi; }
 
             return [ora, minuti, secondi].join(':');
+        }
 
+        function quantoMancaMezzanotte(date) {
+            var d = new Date(date),
+                ora = '' + (d.getHours()),
+                minuti = '' + d.getMinutes(),
+                secondi = d.getSeconds();
+
+                ora = ""+ora;
+                minuti = ""+minuti;
+                secondi = ""+secondi;
+
+            if (ora.length < 2) { ora = '0' + ora; }
+            if (minuti.length < 2) { minuti = '0' + minuti; }
+            if (secondi.length < 2) { secondi = '0' + secondi; }
+
+            //24:00:00 quanto manca
+            //13:45:38   01:04:27    23:58:22
+
+            return [ora, minuti, secondi].join(':');
         }
 
         const todayOk = new Date();
@@ -47,6 +81,12 @@
         console.log('Oggi è ' + formatDate(todayOk));
         //todo che ore sono
         console.log('Sono le ' + cheOreSono(todayOk));
+
+        //calcolare quante ore mancano a mezzanotte
+        console.log('Quanto manca a mezzanotte in ora minuti secondi? ' + quantoMancaMezzanotte(todayOk));
+
+        //quanti giorni mancano a capodanno
+        console.log('Quanto manca a capodanno in giorni ore minuti? ' + quantoMancaMezzanotte(todayOk));
 
     </script>
 
