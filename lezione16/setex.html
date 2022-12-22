@@ -55,6 +55,33 @@
             console.log("Value " + item);
         }
 
+        console.log("+++MAP+++");
+        //MAP
+
+        const myMap = new Map();
+        myMap.set(0, 'zero');
+        myMap.set(1, 'one');
+        myMap.set(2,'due');
+        myMap.set("pippo",'222');
+
+        for (const [key, value] of myMap) {
+            console.log(` La chaive ${key} e il valore  ${value}`);
+        }
+        // 0 = zero
+        // 1 = one
+
+        for (const key of myMap.keys()) {
+            console.log("Solo la chiave " +key);
+        }
+
+        for (const value of myMap.values()) {
+        console.log("Solo il valore "+ value);
+        }
+
+        console.log ("Eseguo un ciclo");
+        myMap.forEach((value, key) => {
+        console.log(`Chiave ${key} e valore ${value}`);
+        });
     </script>
 
 </body>
