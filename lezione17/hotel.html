@@ -68,10 +68,11 @@
                 return (this.stanze - this.occupate);
             };
             nome.textContent = 'Nome struttura: ' + albergo.name;
-            stanze.textContent = 'Numero di stanze: ' + albergo.stanze;
-            //occupateStanze.textContent = 'Stanze occupate: ' + albergo.occupate;
-            //disponibiliStanze.textContent = 'Stanze disponibili: ' + albergo.disponibilita();
+            nStanze.textContent = 'Numero totale stanze: ' + albergo.stanze;
+            occupateStanze.textContent = 'Stanze occupate: ' + albergo.occupate;
+            disponibiliStanze.textContent = 'Stanze disponibili: ' + albergo.disponibilita();
 
+            //quando si clicca bottone
             prenota.onclick = function () {
                 for (i = 0; i < stanze.length; i++) {
                     console.log ("Analizzo stanza "+stanze[i].value);
@@ -81,6 +82,7 @@
                         albergo[scelta] = true;
                     }
                 }
+                //aggiorna disponibilità delle stanze
                 disponibiliStanze.textContent = 'Stanze disponibili: ' + albergo.disponibilita();
                 occupateStanze.textContent = 'Stanze occupate: ' + albergo.occupate;
             }
