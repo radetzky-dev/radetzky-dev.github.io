@@ -11,7 +11,7 @@
 <body>
     <script>
         class Canzone {
-            constructor(title,author,type) {
+            constructor(title, author, type) {
                 this.title = title;
                 this.author = author;
                 this.type = type;
@@ -22,15 +22,23 @@
             }
 
             playWithTitle() {
-                console.log('Sta suonando la canzone '+this.title);
+                console.log('Sta suonando la canzone ' + this.title);
             }
 
             get fullSong() {
                 return `Canzone: ${this.title} Autore : ${this.author}`;
             }
 
+            get getSong() {
+                return this.title;
+            }
+
             set setSong(title) {
                 this.title = title;
+            }
+
+            get getAuthor() {
+                return this.author;
             }
 
             set setAuthor(author) {
@@ -40,15 +48,15 @@
 
         //inizializzo con un valore
         const miaCanzone = new Canzone("Bohemian Rhapsody", "Queen", "mp3");
-        console.log (miaCanzone.fullSong);
+        console.log(miaCanzone.fullSong);
         miaCanzone.playWithTitle();
         //settare dopo i valori coi metodi set 
-        miaCanzone.setSong= "Alba chiara";
-        miaCanzone.setAuthor= "Vasco Rossi";
+        miaCanzone.setSong = "Alba chiara";
+        miaCanzone.setAuthor = "Vasco Rossi";
 
         //... e recuperarli con metodi get
-        console.log (miaCanzone.fullSong);
-        
+        console.log(miaCanzone.fullSong);
+
         miaCanzone.play();
 
         miaCanzone.playWithTitle();
