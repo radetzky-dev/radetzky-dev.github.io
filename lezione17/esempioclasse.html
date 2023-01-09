@@ -11,9 +11,10 @@
 <body>
     <script>
         class Canzone {
-            constructor() {
-                this.title;
-                this.author;
+            constructor(title,author,type) {
+                this.title = title;
+                this.author = author;
+                this.type = type;
             }
 
             play() {
@@ -21,7 +22,12 @@
             }
         }
 
-        const miaCanzone = new Canzone();
+        const miaCanzone = new Canzone("Queen","Bohemian Rhapsody","mp3");
+        
+        console.log (miaCanzone);
+
+        console.log (miaCanzone.author);
+        
         miaCanzone.play();
     </script>
 </body>
