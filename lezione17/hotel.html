@@ -46,6 +46,7 @@
             var disponibiliStanze = document.querySelector("#disponibili");
 
             var stanze = document.getElementsByClassName("radio");
+            console.log ("stanze "+ stanze);
             var prenota = document.querySelector("#prenota");
 
             //inizializza oggetto albergo
@@ -66,14 +67,16 @@
                 this.occupate = i;
                 return (this.stanze - this.occupate);
             };
-            nome.textContent = 'Nome struttra: ' + albergo.name;
+            nome.textContent = 'Nome struttura: ' + albergo.name;
             stanze.textContent = 'Numero di stanze: ' + albergo.stanze;
             //occupateStanze.textContent = 'Stanze occupate: ' + albergo.occupate;
             //disponibiliStanze.textContent = 'Stanze disponibili: ' + albergo.disponibilita();
 
             prenota.onclick = function () {
                 for (i = 0; i < stanze.length; i++) {
+                    console.log ("Analizzo stanza "+stanze[i].value);
                     if (stanze[i].checked) {
+                        console.log ("  Questa stanza è selezionata");
                         var scelta = stanze[i].value;
                         albergo[scelta] = true;
                     }
