@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cards</title>
-
     <style>
         .deck .card {
             border: solid 1px #aaa;
@@ -95,9 +93,16 @@
             renderDeck();
         }
 
+        //mostra mazzo
         function renderDeck() {
             document.getElementById("deck").innerHTML = "";
 
+            /*
+            <div class="card">
+                <div class="value">J</div>
+                <div class="suit diamonds"></div>
+            </div>
+            */
             for (let i = 0; i < deck.length; i++) {
                 let card = document.createElement("div");
                 let value = document.createElement("div");
@@ -114,7 +119,7 @@
             }
         }
 
-
+        //quando la pagina viene caricata
         function load() {
             deck = getDeck();
             shuffle();
@@ -126,9 +131,8 @@
 
 
     <div class="deck">
-        <h1>A Deck of Cards</h1>
-
-        <a href="javascript:void(0)" class="btn" onclick="shuffle()">Shuffle</a>
+        <h1>Mazzo di carte</h1>
+        <a href="javascript:void(0)" class="btn" onclick="shuffle()">Mischia le carte</a>
         <div id="deck"></div>
     </div>
 
