@@ -10,42 +10,19 @@
 
 <body>
     <script>
+
         //Calendario
-        //dato un mese ti stampi il numero dei giorni (1,2,3... 30)
-        //array mesi , array giorni
         var weekDays = Array("Dom", "Lun", "Mar", "Mer", "Gio", "Ven", "Sab");
         var months = Array('Gen', 'Feb', 'Mar', 'Apr', 'Mag', 'Giu', 'Lug', 'Ago', 'Set', 'Ott', 'Nov', 'Dic');
         var monthDays = Array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
 
-        //prompt inserisci numero mese / anno
-        //5-1 -> recuperiamo il nome mese
-        //cambiare 
-        var userMonth = prompt("Inserisci il numero del mese");
-        //controllo che sia compreso fra 1 e 12 e che sia un numero...)
-        var userYear = prompt("Inserisci l'anno");
-
-        alert("Hai inserito " + userMonth + "-" + userYear);
-
-        //controllo che sia un numero
-        //se non sono numeri scrivo che deve inserire dei numeri metto alert
-        var calculate = true;
-        if (isNaN(userMonth)) {
-            alert("Devi inserire un numero per il mese");
-            calculate = false;
-        }
-
-        if (isNaN(userYear)) {
-            alert("Devi inserire un numero per l'anno");
-            calculate = false;
-        }
-
-        //se non ha inserito dei valori numeri non entra qui
-        if (calculate) {
+        const createCalendar = function (calendarName) {
+            console.log("Entro nella funzione createCalendar e creo il calendario " + calendarName);
             //TODO trasformare in una funzione
             var monthToShow = months[userMonth - 1];
             var myMonth = months.indexOf(monthToShow);
             var daysOfMyMonth = monthDays[myMonth];
-            console.log(monthToShow + " ha " + daysOfMyMonth + " giorni"); 
+            console.log(monthToShow + " ha " + daysOfMyMonth + " giorni");
             //Date trovare che giorno era 1 mag 2023
             const myDate = new Date(userYear, userMonth - 1, 1);
             var j = myDate.getDay();
@@ -58,17 +35,39 @@
             console.log(risposta);
         }
 
+        var isCorrectMonth = function (monthNumber) {
+            console.log("Entro della funzione isCorrectMonth controllo mese " + monthNumber);
+            if (monthNumber < 1 || monthNumber > 12) {
+                alert("Devi inserire un valore compreso fra 1 e 12");
+                return false;
+            }
+            return true;
+        }
 
-        /*
-                                            for (let day = 1; day <= daysOfMyMonth; day++) {
-                                            console.log ("xxxx "+ day + " "+monthToShow);
-                                            }
-                                */
-            //Visulizzare Maggio 2024
-            //che giorno è il 1 maggio 2024
-            //ciclo gli array e mostro calendario
-            //lunedì 1 maggio
-            //martedì 2 maggio...
+        //controlla che siano stati inserito numeri e che il mese sia compreso fra 1 e 12
+        var checkMonthYear = function (userMonth, userYear) {
+            if (isNaN(userMonth)) {
+                alert("Devi inserire un numero per il mese!");
+                return false;
+            }
+            if (!isCorrectMonth(userMonth)) {
+                alert("Il numero del mese non è corretto!");
+                return false;
+            }
+            if (isNaN(userYear)) {
+                alert("Devi inserire un numero per l'anno");
+                return false;
+            }
+            return true;
+        }
+
+        var userMonth = prompt("Inserisci il numero del mese");
+        var userYear = prompt("Inserisci l'anno");
+        var calendarName = prompt("Dai un nome al tuo calendario");
+
+        if (checkMonthYear(userMonth,userYear)) {
+            createCalendar(calendarName);
+        }
 
     </script>
 
