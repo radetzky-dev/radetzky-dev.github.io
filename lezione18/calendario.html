@@ -13,7 +13,7 @@
         //Calendario
         //dato un mese ti stampi il numero dei giorni (1,2,3... 30)
         //array mesi , array giorni
-        var weekDays = Array("Lun", "Mar", "Mer", "Gio", "Ven", "Sab", "Dom");
+        var weekDays = Array("Dom", "Lun", "Mar", "Mer", "Gio", "Ven", "Sab");
         var months = Array('Gen', 'Feb', 'Mar', 'Apr', 'Mag', 'Giu', 'Lug', 'Ago', 'Set', 'Ott', 'Nov', 'Dic');
         var monthDays = Array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
 
@@ -27,8 +27,12 @@
         console.log(monthToShow + " ha " + daysOfMyMonth + " giorni"); //Mag ha 31 giorni
         //var daysOfMonth =
 
-        //Date trovare che giorno era 1 mag 2024
-        var j = weekDays.indexOf("Lun");
+        //Date trovare che giorno era 1 mag 2023
+        const myDate = new Date(2023, 4, 1);
+        var j = myDate.getDay();  
+        //console.log (weekday + " "+ weekDays[weekday]);
+        //var j = weekDays.indexOf(weekDays[weekday]);
+       
         var risposta = "";
         for (var i = 1; i < daysOfMyMonth + 1; i++) {
             j = (j % 7);
