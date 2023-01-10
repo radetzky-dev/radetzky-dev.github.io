@@ -11,6 +11,25 @@
             //Calendario
             //dato un mese ti stampi il numero dei giorni (1,2,3... 30)
             //array mesi , array giorni
+            var weekDays = Array("Lun","Mar","Mer","Gio","Ven","Sab","Dom");
+            var months = Array('Gen','Feb','Mar','Apr','Mag','Giu','Lug','Ago','Set','Ott','Nov','Dic');
+            var monthDays = Array(31,28,31,30,31,30,31,31,30,31,30,31);
+
+            //TO DO
+            //prompt inserisci numero mese
+            //5 (+ controllo che sia compreso fra 1 e 12 e che sia un numero...)
+            //5-1 -> recuperiamo il nome mese
+            var monthToShow = "Mag";
+            var myMonth = months.indexOf(monthToShow);
+            console.log (myMonth);  //4
+            var daysOfMyMonth = monthDays[myMonth];
+            console.log (monthToShow + " ha " + daysOfMyMonth +" giorni"); //Mag ha 31 giorni
+            //var daysOfMonth =
+
+            for (let day = 1; day <= daysOfMyMonth; day++) {
+            console.log ("xxxx "+ day + " "+monthToShow);
+            }
+
             //Visulizzare Maggio 2024
             //che giorno è il 1 maggio 2024
             //ciclo gli array e mostro calendario
