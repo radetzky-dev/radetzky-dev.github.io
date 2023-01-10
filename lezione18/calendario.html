@@ -17,18 +17,23 @@
         var months = Array('Gen', 'Feb', 'Mar', 'Apr', 'Mag', 'Giu', 'Lug', 'Ago', 'Set', 'Ott', 'Nov', 'Dic');
         var monthDays = Array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
 
-        //TO DO
         //prompt inserisci numero mese / anno
-        //5 (+ controllo che sia compreso fra 1 e 12 e che sia un numero...)
         //5-1 -> recuperiamo il nome mese
-        var monthToShow = "Mag";
+        //cambiare 
+        var userMonth = prompt("Inserisci il numero del mese");
+         //controllo che sia compreso fra 1 e 12 e che sia un numero...)
+        var userYear = prompt("Inserisci l'anno");
+        //controllo che sia un numero
+        //se non sono numeri scrivo che deve inserire dei numeri
+
+        var monthToShow = months[userMonth-1]; 
         var myMonth = months.indexOf(monthToShow);
         var daysOfMyMonth = monthDays[myMonth];
         console.log(monthToShow + " ha " + daysOfMyMonth + " giorni"); //Mag ha 31 giorni
         //var daysOfMonth =
 
         //Date trovare che giorno era 1 mag 2023
-        const myDate = new Date(2023, 4, 1);
+        const myDate = new Date(userYear, userMonth-1, 1);
         var j = myDate.getDay();  
         //console.log (weekday + " "+ weekDays[weekday]);
         //var j = weekDays.indexOf(weekDays[weekday]);
