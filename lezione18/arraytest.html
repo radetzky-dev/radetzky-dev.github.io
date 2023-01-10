@@ -13,8 +13,8 @@
         var daysOfWeek = new Array("Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato");
         console.log(daysOfWeek[3]);
         console.log("Contiene " + daysOfWeek.length + " elementi");
-       
-        console.log ("***** Ora uso ciclo for ******");
+
+        console.log("***** Ora uso ciclo for ******");
         for (let singleDay = 0; singleDay < daysOfWeek.length; singleDay++) {
             console.log("Posizione " + singleDay + " Nome del giorno " + daysOfWeek[singleDay]);
             if (daysOfWeek[singleDay] == 'Lunedì') {
@@ -106,6 +106,20 @@
                 console.log("Anche B è una vitamina");
             }
         })
+
+        //Find
+        const inventory = [
+            { name: "apples", quantity: 2 },
+            { name: "bananas", quantity: 0 },
+            { name: "cherries", quantity: 5 },
+            { name: "lamponi", quantity: 82 },
+        ];
+
+        function isCherries(pippo) {
+            return pippo.name === "lamponi";
+        }
+
+        console.log(inventory.find(isCherries));
 
     </script>
 </body>
