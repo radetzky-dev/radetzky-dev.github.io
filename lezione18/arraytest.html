@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Array</title>
 </head>
+
 <body>
     <script>
         var daysOfWeek = new Array("Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato");
-        console.log (daysOfWeek[3]);
+        console.log(daysOfWeek[3]);
+        console.log("Contiene "+ daysOfWeek.length + " elementi");
+
+
+        for (let singleDay = 0; singleDay < daysOfWeek.length; singleDay++) {
+            console.log ("Posizione "+singleDay + " Nome del giorno "+daysOfWeek[singleDay]);
+            if (daysOfWeek[singleDay] == 'Lunedì')
+            {
+                console.log ("Il primo giorno della settimana");
+                //chiama la funzione pagaBollette...
+                //invia mail di memorandum
+            }
+        }
+
+        //altro modo di dichiarare un array
+        const fruits = [];
+        fruits.push("banana", "apple", "peach");
+        console.log("Num elementi "+fruits.length);
     </script>
 </body>
+
 </html>
