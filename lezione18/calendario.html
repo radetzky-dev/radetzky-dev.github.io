@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendario</title>
 </head>
-
 <body>
     <script>
-
         //Calendario
         var weekDays = Array("Dom", "Lun", "Mar", "Mer", "Gio", "Ven", "Sab");
         var months = Array('Gen', 'Feb', 'Mar', 'Apr', 'Mag', 'Giu', 'Lug', 'Ago', 'Set', 'Ott', 'Nov', 'Dic');
@@ -18,7 +15,6 @@
 
         const createCalendar = function (calendarName) {
             console.log("Entro nella funzione createCalendar e creo il calendario " + calendarName);
-            //TODO trasformare in una funzione
             var monthToShow = months[userMonth - 1];
             var myMonth = months.indexOf(monthToShow);
             var daysOfMyMonth = monthDays[myMonth];
@@ -61,16 +57,16 @@
             return true;
         }
 
+        //main
         var userMonth = prompt("Inserisci il numero del mese");
         var userYear = prompt("Inserisci l'anno");
         var calendarName = prompt("Dai un nome al tuo calendario");
 
-        if (checkMonthYear(userMonth,userYear)) {
+        if (checkMonthYear(userMonth, userYear)) {
             createCalendar(calendarName);
         }
 
     </script>
-
 </body>
 
 </html>
