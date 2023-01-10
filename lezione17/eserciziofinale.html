@@ -10,19 +10,18 @@
 
 <body>
     <script>
-        //DA IMPLEMENTARE
         class YesterDay extends Date {
             getYesterday() {
-
                 //che giorno della settimana era?
-
+                var yesterday = new Date(new Date().setDate(new Date().getDate() - 1));
+                var dayNames = new Array("Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato");
+                var weekday = yesterday.getDay();
+                return dayNames[weekday];
             }
         }
 
-        //SUGGERIMENTO
-        var today = new Date();
-        var yesterday = new Date(new Date().setDate(new Date().getDate() - 1));
-        console.log (yesterday);
+        const giorno = new YesterDay();
+        console.log("Ieri era " + giorno.getYesterday());
     </script>
 
 </body>
