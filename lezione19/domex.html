@@ -39,6 +39,9 @@
 </head>
 
 <body>
+
+    <h3>Titolo che scompare</h3>
+
     <p>Questo è il mio testo</p>
     <div class="container">
         <textarea class="story"></textarea>
@@ -46,8 +49,10 @@
         <button id="clear-text" type="button">Cancella testo</button>
     </div>
 
-    <table id="outside" >  
-        <th><td>HEADER</td></th>
+    <table id="outside">
+        <th>
+        <td>HEADER</td>
+        </th>
         <tr>
             <td id="t1">one</td>
         </tr>
@@ -60,6 +65,10 @@
     <button onclick="changeColor('blue');">blue</button>
     <button onclick="changeColor('red');">red</button>
     <button onclick="changeColor('green');">green</button>
+
+    <br>
+    <button onclick="cancellaTitolo();">Cancella titolo</button>
+    <button onclick="creaTitolo();">Crea titolo</button>
 
     <script>
         //tre modi di queryselector di selezionare elementi .classi / #id / tag
@@ -103,6 +112,24 @@
                 console.log("No attributes to show");
             }
         }
+
+        function removeAllChildren(element) {
+            while (element.firstChild) {
+                console.log(element.firstChild);
+                element.removeChild(element.firstChild);
+            }
+        }
+        function cancellaTitolo() {
+            removeAllChildren(document.body.querySelector("h3"));
+        }
+        function creaTitolo() {
+            console.log("creo titolo");
+            const h3new = document.createElement("h3");
+            const h3Text = document.createTextNode("Nuovo titolo");
+            h3new.appendChild(h3Text);
+            document.body.appendChild(h3new);
+        }
+
     </script>
 </body>
 
