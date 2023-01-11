@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendario</title>
 </head>
+
 <body>
     <script>
         "use strict";
@@ -45,26 +47,31 @@
         var checkMonthYear = function (userMonth, userYear) {
             if (isNaN(userMonth)) {
                 alert("Devi inserire un numero per il mese!");
-                return false;
+                throw new Error("Non numerico");
             }
             if (!isCorrectMonth(userMonth)) {
                 alert("Il numero del mese non è corretto!");
-                return false;
+                throw new Error("Non numerico");
             }
             if (isNaN(userYear)) {
                 alert("Devi inserire un numero per l'anno");
-                return false;
+                throw new Error("Non numerico");
             }
             return true;
         }
 
-        //main
-        var userMonth = prompt("Inserisci il numero del mese");
-        var userYear = prompt("Inserisci l'anno");
-        var calendarName = prompt("Dai un nome al tuo calendario");
+        try {
+            //main
+            var userMonth = prompt("Inserisci il numero del mese");
+            var userYear = prompt("Inserisci l'anno");
+            var calendarName = prompt("Dai un nome al tuo calendario");
 
-        if (checkMonthYear(userMonth, userYear)) {
-            createCalendar(calendarName);
+            if (checkMonthYear(userMonth, userYear)) {
+                createCalendar(calendarName);
+            }
+        }
+        catch (ex) {
+            console.error("Si è verificato un errore: è stato inserito un valore non numerico", ex.message);
         }
 
     </script>
