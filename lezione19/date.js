@@ -36,6 +36,8 @@ const showDateInfo = function (myDate) {
   console.log("++++++");
   console.log("Ora " + myDate.getHours());
   console.log("Minuti " + myDate.getMinutes());
+ 
+  
 };
 
 let Year = 2023;
