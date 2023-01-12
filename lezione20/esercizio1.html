@@ -41,7 +41,6 @@
         const form = document.createElement("form");
         const h1 = getHeading();
         const button = getGreetButton();
-
         const { label, input } = getGreetInputTextElement(); // ES6 ModernJs -> Object Destructuring
         const divelement = document.createElement("div");
 
@@ -52,8 +51,19 @@
         form.insertAdjacentElement("afterend", divelement);
         input.insertAdjacentElement("afterend", button);
 
-    </script>
+        input.addEventListener("input", (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            button.disabled = !e.target.value;
+        });
 
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            divelement.innerHTML = e.target.elements.item(0).value;
+            e.target.reset();
+        })
+    </script>
 </body>
 
 </html>
