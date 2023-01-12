@@ -48,3 +48,19 @@
             Iberian ham. The 'pata negra' (blackfoot) pigs are fed on acorns in the cork-oak
             forests, the key to producing the world's best ham and cured sausages.</p>
     </article>
+    <script>
+        function getTitlesFromArticles(list) {
+            const articleTitles = [];
+            for (let i = 0; i < list.length; i++) {
+                console.log(list.item(i).innerHTML);
+                articleTitles.push(list.item(i).innerHTML);
+            }
+            return articleTitles;
+        }
+
+        const articleTitles = getTitlesFromArticles(document.querySelectorAll("article > h2"));
+        console.log ("Titoli "+articleTitles)
+    </script>
+</body>
+
+</html>
