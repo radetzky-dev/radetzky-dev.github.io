@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Esercitazione Form</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-<!-- my path 
+    <!-- my path 
 http://localhost/musa/radetzky-dev.github.io/radetzky-dev.github.io/lezione20/form-evoluto.html
 -->
-    </head>
-
+</head>
 <body>
     <div class="container">
         <header>
@@ -20,11 +17,10 @@ http://localhost/musa/radetzky-dev.github.io/radetzky-dev.github.io/lezione20/fo
         <main>
             <div class="row align-items-start">
                 <div class="col">
-
                     <div class="card mb-3">
                         <div class="card-body">
                             <h5 class="card-title">Inserisci nuova persona</h5>
-                            <form>
+                            <form> <!-- todo dargli nome e prendere dati coi nomi-->
                                 <label for="name" class="mb-1 required-field">Name</label>
                                 <input type="text" class="form-control" name="name" placeholder="Name" id="name"
                                     required>
@@ -32,39 +28,35 @@ http://localhost/musa/radetzky-dev.github.io/radetzky-dev.github.io/lezione20/fo
                                 <input type="number" class="form-control" name="età" placeholder="Età" id="età"
                                     required>
                                 <label for="città" class="mt-3 mb-1 required-field">Città</label>
-                                <input type="text" class="form-control" name="città" placeholder="città" id="città">
-                                <button class="btn btn-primary mt-3" type="submit">Submit</button>
+                                <input type="text" class="form-control" name="città" placeholder="Città" id="città">
+                                <button class="btn btn-primary mt-3" type="submit">Invia</button>
                             </form>
                         </div>
                     </div>
-
                     <div class="card mb-3">
                         <div class="card-body">
                             <h5 class="card-title">Seleziona per compleanno</h5>
                             <form>
                                 <select class="form-select" aria-label="Default select example">
                                     <option selected>---</option>
-                                    <!-- -->
                                 </select>
                                 <button class="btn btn-primary mt-3" type="submit">Submit</button>
                             </form>
                         </div>
                     </div>
-
                 </div>
                 <div class="col">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Persone</h5>
+                            <h5 class="card-title">Lista delle persone</h5>
                             <ul id="persons-list" class="list-group">
                                 <li class="list-group-item d-flex">
-                                    <div>Klaus</div>
-                                    <div class="ms-auto">40 anni</div>
+                                    <div>Mario</div>
+                                    <div class="ms-auto">81 anni</div>
                                 </li>
                             </ul>
                         </div>
                     </div>
-
                 </div>
             </div>
         </main>
@@ -77,6 +69,7 @@ http://localhost/musa/radetzky-dev.github.io/radetzky-dev.github.io/lezione20/fo
         crossorigin="anonymous"></script>
 
     <script>
+        //TODO inserire anche mail
         class Person {
             constructor(name, age, city = "") {
                 this.name = name;
@@ -84,15 +77,15 @@ http://localhost/musa/radetzky-dev.github.io/radetzky-dev.github.io/lezione20/fo
                 this.city = city;
             }
         }
-    </script>
-    <script>
+
         const persons = {
             list: [
-                new Person("Klaus", 38),
+                new Person("Klaus", 82),
+                new Person("Mario", 81, "Madrid"),
                 new Person("Walter", 45, "Hamburg"),
                 new Person("Susi", 39, "Hamburg"),
                 new Person("Antonio", 21, "Milano"),
-                "qualcos altro"
+                new Person("Guido", 37, "Torino"),
             ],
             addItemToList: function (item) {
                 this.list.push(item);
@@ -107,9 +100,7 @@ http://localhost/musa/radetzky-dev.github.io/radetzky-dev.github.io/lezione20/fo
         };
 
 
-        /**/
         const populatePersonsList = function (persons) {
-
             function toListItem({ name, age, city }) {
                 return `<li class="list-group-item d-flex">
                        <div>${name} ${city ? `(${city})` : ''}</div>
@@ -119,7 +110,6 @@ http://localhost/musa/radetzky-dev.github.io/radetzky-dev.github.io/lezione20/fo
 
             if (persons instanceof Array) {
                 const ul = document.getElementById("persons-list");
-
                 ul.innerHTML = persons
                     .filter(p => p instanceof Person)
                     .sort((a, b) => a.age - b.age)
@@ -134,6 +124,7 @@ http://localhost/musa/radetzky-dev.github.io/radetzky-dev.github.io/lezione20/fo
             if (persons instanceof Array) {
                 const form = document.forms.item(1);
                 const select = form.elements[0];
+                //todo ordinare in ordine alfabetico
                 const newOptions = persons
                     .filter(p => p instanceof Person)
                     .sort((a, b) => a.age - b.age)
@@ -147,17 +138,11 @@ http://localhost/musa/radetzky-dev.github.io/radetzky-dev.github.io/lezione20/fo
             }
         }
 
-
-
-        /**/
-
+        //Le prime cose che fa
         populatePersonsList(persons.list);
         populateOptions(persons.list);
 
-
         const personCreateForm = document.forms.item(0);
-
-
         personCreateForm.addEventListener('submit', (e) => {
             e.preventDefault();
             e.stopPropagation();
@@ -167,12 +152,10 @@ http://localhost/musa/radetzky-dev.github.io/radetzky-dev.github.io/lezione20/fo
             const city = form.elements[2].value;
             const person = new Person(name, age, city);
             persons.addItemToList(person);
-
             form.reset();
         });
 
         const birthdayForm = document.forms[1];
-
         birthdayForm.addEventListener("submit", (e) => {
             e.preventDefault();
             e.stopPropagation();
