@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Lista</title>
 </head>
-
 <body>
     <!--
         Generare una lista di link a partire da un elenco di articoli presenti nel codice html
@@ -52,14 +50,39 @@
         function getTitlesFromArticles(list) {
             const articleTitles = [];
             for (let i = 0; i < list.length; i++) {
-                console.log(list.item(i).innerHTML);
+                console.log("TITOLO: " + list.item(i).innerHTML);
                 articleTitles.push(list.item(i).innerHTML);
             }
             return articleTitles;
         }
 
-        const articleTitles = getTitlesFromArticles(document.querySelectorAll("article > h2"));
-        console.log ("Titoli "+articleTitles)
+        function createAnchor(title, order) {
+            const elementA = document.createElement("a");
+            elementA.style.color = "blue";
+            elementA.innerHTML = title;
+            elementA.setAttribute("href", "#item-" + order);
+            elementA.setAttribute("target", "_self");
+            return elementA;
+        }
+
+        (function () {
+            const articleTitles = getTitlesFromArticles(document.querySelectorAll("article > h2"));
+            console.log("Titoli " + articleTitles);
+
+            const bodyElement = document.querySelector("body");
+            const elementUl = document.createElement("ul");
+
+            if (bodyElement instanceof HTMLBodyElement) {
+                //bodyElement.style = "background-color: red";
+                bodyElement.prepend(elementUl);
+                for (let i = 0; i < articleTitles.length; i++) {
+                    const element = document.createElement("li");
+                    const elementA = createAnchor(articleTitles[i], i + 1);
+                    element.append(elementA);
+                    elementUl.append(element);
+                }
+            }
+        })();
     </script>
 </body>
 
