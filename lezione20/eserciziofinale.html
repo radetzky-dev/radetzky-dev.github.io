@@ -26,6 +26,18 @@
             </div>
         </div>
     </div>
+    <script>
+        const textArea = document.getElementById("copy-text");
+        const button = document.querySelector("#copy-btn");
+
+        button.addEventListener('click', () => {
+            console.log("button cliccato...");
+            if (textArea instanceof HTMLTextAreaElement) {
+                navigator.clipboard.writeText(`Quello che segue è il valore della textarea: ${textArea.value}`);
+                textArea.value = '';
+            }
+        });
+    </script>
 </body>
 
 </html>
