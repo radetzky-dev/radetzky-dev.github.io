@@ -26,13 +26,15 @@
                                     required>
                                 <label for="città" class="mt-3 mb-1 required-field">Città</label>
                                 <input type="text" class="form-control" name="città" placeholder="Città" id="città">
+                                <label for="mail" class="mt-3 mb-1 required-field">E-mail</label>
+                                <input type="email" class="form-control" name="mail" placeholder="Inseirsci la tua email" id="mail">
                                 <button class="btn btn-primary mt-3" type="submit">Invia</button>
                             </form>
                         </div>
                     </div>
                     <div class="card mb-3">
                         <div class="card-body">
-                            <h5 class="card-title">Seleziona per compleanno</h5>
+                            <h5 class="card-title">Seleziona per aggiungere un anno</h5>
                             <form>
                                 <select class="form-select" aria-label="Default select example">
                                     <option selected>---</option>
@@ -68,21 +70,22 @@
     <script>
         //TODO inserire anche mail
         class Person {
-            constructor(name, age, city = "") {
+            constructor(name, age, city = "", email="") {
                 this.name = name;
                 this.age = age;
                 this.city = city;
+                this.email = email;
             }
         }
 
         const persons = {
             list: [
-                new Person("Klaus", 82),
-                new Person("Mario", 81, "Madrid"),
-                new Person("Walter", 45, "Hamburg"),
-                new Person("Susi", 39, "Hamburg"),
+                new Person("Zlaus", 82),
+                new Person("Dario", 81, "Madrid"),
+                new Person("Calter", 45, "Hamburg"),
+                new Person("Busi", 39, "Hamburg",'susi@lego.it'),
                 new Person("Antonio", 21, "Milano"),
-                new Person("Guido", 37, "Torino"),
+                new Person("Euido", 37, "Torino"),
             ],
             addItemToList: function (item) {
                 this.list.push(item);
@@ -98,9 +101,9 @@
 
 
         const populatePersonsList = function (persons) {
-            function toListItem({ name, age, city }) {
+            function toListItem({ name, age, city, email }) {
                 return `<li class="list-group-item d-flex">
-                       <div>${name} ${city ? `(${city})` : ''}</div>
+                       <div>${name} ${city ? `(${city})` : ''} ${email ? `mail: ${email}` : ''}</div>
                        <div class="ms-auto">${age} anni</div>
                     </li>`;
             }
@@ -157,9 +160,15 @@
             e.preventDefault();
             e.stopPropagation();
             const selectedPersonName = e.target.elements[0].value;
+            console.log (selectedPersonName);
+
+            console.log (persons.list.filter(p => p instanceof Person));
+
+            //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
             const selectedPerson = persons.list
                 .filter(p => p instanceof Person)
-                .sort((a, b) => a.age - b.age)[selectedPersonName];
+                .sort((a, b) => a.name > b.name))[selectedPersonName];
+                console.log (selectedPerson);
             if (selectedPerson instanceof Person) {
                 selectedPerson.age++;
                 document.dispatchEvent(new Event("listUpdated", {
