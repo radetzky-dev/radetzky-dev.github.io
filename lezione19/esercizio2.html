@@ -11,6 +11,7 @@
 <body>
     <h1>Things to do</h1>
     <h1>Altre cose</h1>
+    <p id="p1">First line of paragraph.</p>
     <ol id="toDoList">
         <li class="important" about="something">Mow the lawn</li>
         <li>Clean the windows</li>
@@ -40,6 +41,14 @@
             console.log(document.querySelector(".important").nodeName);
             console.log(document.querySelectorAll(".important").length);
 
+            //aggiunge nodo
+            const newtext = document.createTextNode("->nuovo testo");
+            const p1 = document.getElementById("p1");
+            p1.appendChild(newtext);
+
+            let p_prime = p1.cloneNode(true)
+            p1.appendChild(p_prime);
+
             let count = 0;
             for (let i = 0; i < olElement.childNodes.length; i++) {
                 if (olElement.childNodes[i].nodeType === 1) {
@@ -48,7 +57,30 @@
             }
             return count;
         }
-        alert("The ordered list contains " + countListItems() + " items.")
+        console.log("La lista contiene " + countListItems() + " elementi");
+        addElement();
+        console.log("Elemento inserito");
+
+        function addElement() {
+            // create a new div element
+            const newDiv = document.createElement("div");
+            // and give it some content
+            const newContent = document.createTextNode("saluti dal div!");
+            // add the text node to the newly created div
+            newDiv.appendChild(newContent);
+            // add the newly created element and its content into the DOM
+            const olEl = document.getElementById("ol");
+            document.body.insertBefore(newDiv, olEl);
+        }
+
+
+        let div = document.createElement("div");
+        let p = document.createElement("p");
+        let span = document.createElement("span");
+        div.append(p);
+        div.prepend(span);
+
+        console.log("Inseriti " + div.childNodes);
     </script>
 </body>
 
