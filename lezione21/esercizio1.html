@@ -24,9 +24,33 @@
         </div>
     </div>
     <script>
-    const image = 'https://upload.wikimedia.org/wikipedia/commons/b/b2/Eagle_nebula_pillars.jpg';
-    const promise = fetch(image);
-    console.log(promise);
+        const image = 'https://upload.wikimedia.org/wikipedia/commons/b/b2/Eagle_nebula_pillars.jpg';
+        const promise = fetch(image);
+        console.log(promise);
+
+        const LoadingEffect = function (elmDisplay, operation) {
+            const p = document.createElement("p");
+            p.setAttribute("class", "loading-effect");
+            p.innerHTML = `attendere ${operation}`;
+
+            this.start = () => {
+                elmDisplay.append(p);
+                this.interval = setInterval(() => {
+                    p.innerHTML += ".";
+                }, 100);
+            }
+            this.unset = () => {
+                elmDisplay.removeChild(p);
+                clearInterval(this.interval);
+            }
+        }
+
+        const div = document.querySelector(".exercise-display");
+        const loadingEffect = new LoadingEffect(div, "scaricamento in corso");
+        const blobLoadingEffect = new LoadingEffect(div, "lettura in corso");
+        loadingEffect.start();
+
     </script>
 </body>
+
 </html>
