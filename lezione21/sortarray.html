@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort</title>
+</head>
+
+<body>
+    <script>
+        const items = [
+            { name: "Edward", value: 21 },
+            { name: "Sharpe", value: 37 },
+            { name: "And", value: 45 },
+            { name: "The", value: -12 },
+            { name: "Magnetic", value: 13 },
+            { name: "Zeros", value: 37 },
+        ];
+
+        for (let index = 0; index < items.length; index++) {
+            console.log (items[index].name + " value "+ items[index].value);
+        }
+
+        console.log ("Ordino per valore ...");
+        // sort by value
+        items.sort((a, b) => a.value - b.value);
+        for (let index = 0; index < items.length; index++) {
+            console.log (items[index].name + " value "+ items[index].value);
+        }
+
+        console.log ("Ordino per nome ...");
+
+        // sort by name
+        items.sort((a, b) => {
+            const nameA = a.name.toUpperCase(); // ignore upper and lowercase
+            const nameB = b.name.toUpperCase(); // ignore upper and lowercase
+            if (nameA < nameB) {
+                return -1;
+            }
+            if (nameA > nameB) {
+                return 1;
+            }
+
+            // names must be equal
+            return 0;
+        });
+
+      //  console.log(items);
+        for (let index = 0; index < items.length; index++) {
+            console.log (items[index].name + " value "+ items[index].value);
+        }
+    </script>
+
+</body>
+
+</html>
