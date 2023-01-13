@@ -1,12 +1,11 @@
 class Person {
-    constructor(name, age, city = "", email = "") {
-      this.name = name;
-      this.age = age;
-      this.city = city;
-      this.email = email;
-    }
+  constructor(name, age, city = "", email = "") {
+    this.name = name;
+    this.age = age;
+    this.city = city;
+    this.email = email;
   }
-
+}
 
 const populatePersonsList = function (persons) {
   function toListItem({ name, age, city, email }) {
@@ -28,13 +27,10 @@ const populatePersonsList = function (persons) {
   }
 };
 
-const a = "test";
-let b = "something";
 const populateOptions = function (persons) {
   if (persons instanceof Array) {
     const form = document.forms.item(1);
     const select = form.elements[0];
-    console.log(select);
     //Ordino alfabetico
     const newOptions = persons
       .filter((p) => p instanceof Person)
@@ -59,7 +55,28 @@ const populateOptions = function (persons) {
   }
 };
 
-const laVedo ="la vedo!";
+const persons = {
+    list: [
+      new Person("Zlaus", 82),
+      new Person("Dario", 81, "Madrid"),
+      new Person("Calter", 45, "Hamburg"),
+      new Person("Busi", 39, "Hamburg", "susi@lego.it"),
+      new Person("Antonio", 21, "Milano"),
+      new Person("Euido", 37, "Torino"),
+    ],
+    addItemToList: function (item) {
+      this.list.push(item);
+      document.dispatchEvent(
+        new Event("listUpdated", {
+          bubbles: true,
+        })
+      );
+    },
+    getList: function () {
+      return [...this.list];
+    },
+    somethingElse: "string",
+  };
 
 export default populatePersonsList;
-export { Person,populateOptions, laVedo };
+export { Person, populateOptions,persons };
