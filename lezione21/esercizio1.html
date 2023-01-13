@@ -26,7 +26,6 @@
     <script>
         const image = 'https://upload.wikimedia.org/wikipedia/commons/b/b2/Eagle_nebula_pillars.jpg';
         const promise = fetch(image);
-        console.log(promise);
 
         const LoadingEffect = function (elmDisplay, operation) {
             const p = document.createElement("p");
@@ -49,7 +48,6 @@
         const loadingEffect = new LoadingEffect(div, "scaricamento in corso");
         const blobLoadingEffect = new LoadingEffect(div, "lettura in corso");
         loadingEffect.start();
-
 
         // PROMISE
         promise
