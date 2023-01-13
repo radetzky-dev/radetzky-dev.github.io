@@ -23,6 +23,7 @@ function showNotes() {
   if (notes == null) {
     notesObj = [];
   } else {
+    //NOTE IN MEMORIA... ["Una nuova nota di testo","la mia nota","ciao mondo"]
     console.log ("NOTE IN MEMORIA... "+notes);
     //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse
     notesObj = JSON.parse(notes);
