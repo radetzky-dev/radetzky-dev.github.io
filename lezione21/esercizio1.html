@@ -37,7 +37,7 @@
                 elmDisplay.append(p);
                 this.interval = setInterval(() => {
                     p.innerHTML += ".";
-                }, 100);
+                }, 500);
             }
             this.unset = () => {
                 elmDisplay.removeChild(p);
@@ -50,6 +50,41 @@
         const blobLoadingEffect = new LoadingEffect(div, "lettura in corso");
         loadingEffect.start();
 
+
+        // PROMISE
+        promise
+            .then((response) => {
+                // DOPO LA FINE DELLA CHIAMATA...
+                console.log(response);
+                if (response.status !== 200) {
+                    throw new Error("Response ko");
+                }
+                let p = document.createElement("p");
+                p.innerHTML = `HTTP status code: ${response.status}`;
+                div.append(p);
+                loadingEffect.unset();
+                const blob = response.blob();
+                blobLoadingEffect.start();
+                return blob;
+            })
+            .then((blob) => {
+                // DOPO LA FINE DELLA LETTURA DELLO STREAM IN UN BLOB
+                const imageObjectURL = URL.createObjectURL(blob);
+                const imageElm = document.createElement("img");
+                div.append(imageElm);
+                imageElm.src = imageObjectURL;
+                blobLoadingEffect.unset();
+            })
+            .catch((error) => {
+                // IN CASO DI ERRORE DI OGNI PROMISE
+                alert(error.message);
+                loadingEffect.unset();
+                //  blobLoadingEffect.unset();
+            })
+            .finally(() => {
+                // ALLA FINE..
+                console.log ("Operazione terminata");
+            });
     </script>
 </body>
 
