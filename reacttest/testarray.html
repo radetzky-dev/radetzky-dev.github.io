@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Add React in One Minute</title>
+</head>
+
+<body>
+
+  <h2>Array</h2>
+  <div id="root"></div>
+
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script>
+    function NumberList(props) {
+      const numbers = props.numbers;
+      const listItems = numbers.map((number) =>
+        <li key={number.toString()}>
+          {number}
+        </li>
+      );
+      return (
+        <ul>{listItems}</ul>
+      );
+    }
+
+    const numbers = [1, 2, 3, 4, 5];
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<NumberList numbers={numbers} />);
+  </script>
+
+</body>
+
+</html>
