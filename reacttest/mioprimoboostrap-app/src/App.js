@@ -12,12 +12,13 @@ const ExampleToast = ({ children }) => {
 
   return (
     <>
-      {!show && <Button onClick={() => toggleShow(true)}>Show Toast</Button>}
+      {!show && <Button onClick={() => toggleShow(true)}>Mostra Toast</Button>}
       <Toast show={show} onClose={() => toggleShow(false)}>
         <Toast.Header>
           <strong className="mr-auto">React-Bootstrap</strong>
         </Toast.Header>
-        <Toast.Body>{children}</Toast.Body>
+        <Toast.Body>{children}
+        </Toast.Body>
       </Toast>
     </>
   );
@@ -32,6 +33,7 @@ const App = () => (
         <span role="img" aria-label="tada">
           🎉
         </span>
+        <p>Ciao dal box!</p>
       </ExampleToast>
     </Container>
   </Container>
