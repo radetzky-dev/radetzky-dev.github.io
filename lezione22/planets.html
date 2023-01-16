@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planets</title>
+    <script>
+        window.addEventListener("load", function () {
+            let json = [];
+            fetch("https://handlers.education.launchcode.org/static/planets.json").then(function (response) {
+                response.json().then(function (json) {
+                    console.log(json);
+                });
+            });
+            const destination = document.getElementById("destination");
+            destination.innerHTML = `<h3>Planet ${json[0].name}</h3>`;
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Destination</h1>
+    <div id="destination">
+        <h3>Planet</h3>
+    </div>
+
+</body>
+
+</html>
