@@ -12,11 +12,16 @@
     <script>
         let callMyApi = "https://dog.ceo/api/breeds/image/random";
         fetch(callMyApi).then(function (response) {
-            console.log (response);
-            console.log ("Risposta status: " + response.status);
+            console.log(response);
+            console.log("Risposta status: " + response.status);
             response.json().then(function (json) {
                 console.log(json);
+                //const myDog = JSON.parse(json);
+                let url = json.message;
+                console.log("Indirizzo della foto: " + url);
             });
+        }).catch((errorMessage) => {
+            console.log(`Non raggiungibile: ${errorMessage}`);
         });
     </script>
 
