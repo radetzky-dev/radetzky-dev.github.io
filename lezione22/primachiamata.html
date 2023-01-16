@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <h1>L'immagine del mio cane</h1>
     <script>
         let callMyApi = "https://dog.ceo/api/breeds/image/random";
         fetch(callMyApi).then(function (response) {
@@ -16,9 +17,20 @@
             console.log("Risposta status: " + response.status);
             response.json().then(function (json) {
                 console.log(json);
-                //const myDog = JSON.parse(json);
                 let url = json.message;
                 console.log("Indirizzo della foto: " + url);
+                //check se img dogphoto esiste
+                if (document.getElementById("dogphoto") != null) {
+                    //esiste
+                    let targetImg = document.getElementById("dogphoto");
+                    targetImg.setAttribute("src", url);
+                } else {
+                    //se non esiste lo creo
+                    let targetImg = document.createElement("img");
+                    targetImg.setAttribute("id", "dogphoto");
+                    targetImg.setAttribute("src", url);
+                    document.body.appendChild(targetImg);
+                }
             });
         }).catch((errorMessage) => {
             console.log(`Non raggiungibile: ${errorMessage}`);
