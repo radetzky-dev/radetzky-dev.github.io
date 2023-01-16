@@ -11,7 +11,7 @@
 <body>
     <script>
         async function* myGenerator(step) {
-            await new Promise((resolve) => setTimeout(resolve, 10));
+            await new Promise((resolve) => setTimeout(resolve, 20));
             yield 0;
             yield step;
             yield step * 2;
@@ -36,6 +36,26 @@
                 console.log(res); // { value: undefined, done: true }
                 return gen.next();
             });
+
+
+        function resolveAfter2Seconds(x) {
+            console.log ("Prima della promise");
+            return new Promise((resolve) => {
+                console.log ("Dentro promise ora attenderò 5 sec")
+                setTimeout(() => {
+                    resolve(x);
+                }, 5000);
+                console.log ("Promessa finita");
+            });
+        }
+
+        async function f1() {
+            console.log ("Sto per chiamare la funzione async");
+            const x = await resolveAfter2Seconds(10);
+            console.log("Funzione asyc chiamata" + x); // 10
+        }
+
+        f1();
 
     </script>
 </body>
