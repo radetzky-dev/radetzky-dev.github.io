@@ -1,12 +1,21 @@
-let obj: any = { x: 0 };
-// None of the following lines of code will throw compiler errors.
-// Using `any` disables all further type checking, and it is assumed 
-// you know the environment better than TypeScript.
+let user: any = { userName: "Mario", userBirthYear: 1980 }; //recuperato da una chiamata
 
-function greet(name: string, age: number) {
-    console.log("Hello, " + name.toUpperCase() + " hai "+age+" anni.");
-  }
+/**
+ * Greet the user and show years
+ * @param name 
+ * @param age 
+ */
+function greet(name: string, age: number): void {
+  console.log("Hello, " + name.toUpperCase() + " hai " + age + " anni.");
+}
 
-console.log(obj);
+/**
+ * Get the age
+ * @param birthYear 
+ * @returns 
+ */
+function getAge(birthYear: number): number {
+  return new Date().getFullYear() - birthYear;
+}
 
-greet("Mario",19);
+greet(user["userName"], getAge(user["userBirthYear"]));
