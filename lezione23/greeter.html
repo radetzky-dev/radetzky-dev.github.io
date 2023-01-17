@@ -36,26 +36,14 @@
     </div>
     <script src="greeter.js"></script>
     <script>
-
         const personForm = document.forms[0];
         personForm.addEventListener("submit", (e) => {
             e.preventDefault();
             e.stopPropagation();
             console.log("Bottone premuto");
-            getData(e.target.elements[0].value,e.target.elements[1].value);
-
-            /*
-            const selectedPersonName = e.target.elements[0].value;
-            const selectedPerson = persons.list
-                .filter(p => p instanceof Person)
-                .sort((a, b) => a.age - b.age)[selectedPersonName];
-            if (selectedPerson instanceof Person) {
-                selectedPerson.age++;
-                document.dispatchEvent(new Event("listUpdated", {
-                    bubbles: true
-                }));
-            }
-            */
+            //getData(e.target.elements[0].value,e.target.elements[1].value);
+            // let myPerson: Person = new Person(firstName, lastName);
+            greeter(new Person(e.target.elements[0].value, e.target.elements[1].value));
         });
 
     </script>

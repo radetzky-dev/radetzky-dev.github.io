@@ -1,17 +1,15 @@
-class Student {
-  fullName: string;
-  constructor(
-    public firstName: string,
-    public middleInitial: string,
-    public lastName: string
-  ) {
-    this.fullName = firstName + " " + middleInitial + " " + lastName;
+/**
+ * Person class
+ */
+class Person {
+  constructor(firstName: string, lastName: string, city: string = "") {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.city = city;
   }
-}
-
-interface Person {
   firstName: string;
   lastName: string;
+  city: string | null;
 }
 
 /**
@@ -20,24 +18,8 @@ interface Person {
  * @returns
  */
 function greeter(person: Person) {
-  console.log("dati ricevuti!" + person.firstName + " " + person.lastName);
+  console.log("dati ricevuti:" + person.firstName + " " + person.lastName);
   const divInfo = document.getElementById("peopleData");
-  divInfo?.innerHTML ="<p> <b>"+person.firstName+" "+person.lastName+"</b></p>";
-}
-
-//let user = new Student("Jane", "M.", "User");
-
-/**
- * 
- * @param firstName 
- * @param lastName 
- */
-function getData(firstName: string, lastName: string) {
-  console.log("firstName " + firstName);
-  console.log("lastName " + lastName);
-  let myPerson: Person = { firstName : "", lastName : ""}; //todo inizializzarlo correttamente
-  myPerson.firstName = firstName;
-  myPerson.lastName = lastName;
-  console.log (myPerson);
-  greeter(myPerson);
+  divInfo.innerHTML =
+    "<p> <b>" + person.firstName + " " + person.lastName + "</b></p>";
 }
