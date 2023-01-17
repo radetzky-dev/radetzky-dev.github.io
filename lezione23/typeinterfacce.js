@@ -21,9 +21,16 @@ var user4 = {
     city: "Dublin"
 };
 console.log("Ciao " + user.firstName);
+var user5 = {
+    firstName: "Mario",
+    lastName: "Bros",
+    city: "Rimini",
+    address: "via roma 6"
+};
 console.log(greeter(user));
 console.log(greeter(user2));
 console.log(greeter(user4));
+console.log(greeter(user5) + " abiti " + user5.address);
 var user3 = {
     name: "mario",
     job: "idraulico",
@@ -55,3 +62,5 @@ printAll(valore);
 var valoreMultiplo = ["uno", "due", "tre"];
 printAll(valoreMultiplo);
 printAll(null);
+var myLang = "TYPESCRIPT";
+console.log(myLang);

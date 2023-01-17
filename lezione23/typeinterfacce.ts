@@ -5,6 +5,10 @@ interface PersonInterface {
   age?: number;
 }
 
+interface extendedPerson extends PersonInterface {
+  address: string;
+}
+
 type OtherPersonType = {
   name: string;
   job?: string;
@@ -39,9 +43,17 @@ const user4: PersonInterface = {
 };
 console.log("Ciao " + user.firstName);
 
+const user5: extendedPerson = {
+  firstName: "Mario",
+  lastName: "Bros",
+  city: "Rimini",
+  address: "via roma 6",
+};
+
 console.log(greeter(user));
 console.log(greeter(user2));
 console.log(greeter(user4));
+console.log(greeter(user5) + " abiti " + user5.address);
 
 const user3: OtherPersonType = {
   name: "mario",
@@ -51,28 +63,35 @@ const user3: OtherPersonType = {
   },
 };
 
-console.log(user3.sayHello(user3.name)  + " il tuo mestiere è " + user3.job);
+console.log(user3.sayHello(user3.name) + " il tuo mestiere è " + user3.job);
 
 /**
  * Print object and check his type
- * @param strs 
+ * @param strs
  */
-function printAll(strs: string | string[] | null) : void {
-    if (typeof strs === "object" && strs !== null) {
-      for (const s of strs) {
-        console.log("ARRAY o oggetto "+ s);
-      }
-    } else if (typeof strs === "string") {
-      console.log("SONO UNA STRINGA " + strs);
-    } else {
-      console.log ("sono null");
+function printAll(strs: string | string[] | null): void {
+  if (typeof strs === "object" && strs !== null) {
+    for (const s of strs) {
+      console.log("ARRAY o oggetto " + s);
     }
+  } else if (typeof strs === "string") {
+    console.log("SONO UNA STRINGA " + strs);
+  } else {
+    console.log("sono null");
   }
+}
 
-const valore:string = "ciao";
+const valore: string = "ciao";
 printAll(valore);
 
-const valoreMultiplo:string[] = ["uno","due","tre"];
+const valoreMultiplo: string[] = ["uno", "due", "tre"];
 printAll(valoreMultiplo);
 
-printAll (null);
+printAll(null);
+
+type Greeting = "Hello, world";
+type ShoutyGreeting = Uppercase<Greeting>;
+
+type linguaggi = "PHP" | "JAVA" | "TYPESCRIPT";
+const myLang: linguaggi = "TYPESCRIPT";
+console.log(myLang);
