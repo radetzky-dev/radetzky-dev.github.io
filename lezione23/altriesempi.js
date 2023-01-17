@@ -67,3 +67,15 @@ if (optionalCountry === undefined) {
     optionalCountry = "Italia";
 }
 console.log("City " + optionalCity + " country " + optionalCountry);
+/**
+ *
+ * @param a
+ * @param b
+ * @returns
+ */
+function bar(a, b) {
+    if (b === void 0) { b = 1; }
+    return a + b;
+}
+console.log(bar(1)); // OK, second argument considered optional
+console.log(bar(1, 5));

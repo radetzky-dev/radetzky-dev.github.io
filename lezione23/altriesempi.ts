@@ -25,7 +25,7 @@ const names: string[] = ["Alice", "Bob", "Eve"];
 // Contextual typing for function
 names.forEach(function (s) {
   if (typeof s === "string") {
-    console.log ("stringa "+s.toUpperCase);
+    console.log("stringa " + s.toUpperCase);
   }
   console.log(s);
 });
@@ -71,16 +71,26 @@ greeter(printToConsole);
 let optionalCity: string | null = null;
 let optionalCountry: string | undefined = undefined;
 
-console.log ("City "+optionalCity + " country "+optionalCountry);
+console.log("City " + optionalCity + " country " + optionalCountry);
 
-if (optionalCity === null)
-{
-    optionalCity ="Roma";
+if (optionalCity === null) {
+  optionalCity = "Roma";
 }
-if (optionalCountry === undefined)
-{
-    optionalCountry ="Italia";
+if (optionalCountry === undefined) {
+  optionalCountry = "Italia";
 }
 
+console.log("City " + optionalCity + " country " + optionalCountry);
 
-console.log ("City "+optionalCity + " country "+optionalCountry);
+/**
+ * 
+ * @param a 
+ * @param b 
+ * @returns 
+ */
+function bar(a : number, b : number = 1) : number {
+  return a+b;
+}
+
+console.log (bar(1)); // OK, second argument considered optional
+console.log (bar(1, 5));
