@@ -24,6 +24,9 @@ const names: string[] = ["Alice", "Bob", "Eve"];
 
 // Contextual typing for function
 names.forEach(function (s) {
+  if (typeof s === "string") {
+    console.log ("stringa "+s.toUpperCase);
+  }
   console.log(s);
 });
 
@@ -39,7 +42,7 @@ printCoord({ x: 3, y: 7 });
 
 /**
  * printName and lastName (if provided : last is not mandatory)
- * @param person 
+ * @param person
  */
 function printName(person: { first: string; last?: string }): void {
   console.log("Name: " + person.first);
@@ -50,3 +53,34 @@ function printName(person: { first: string; last?: string }): void {
 // Both OK
 printName({ first: "Bob" });
 printName({ first: "Alice", last: "Alisson" });
+
+/**
+ * Una funzione che chiama un'altra funzione
+ * @param fn
+ */
+function greeter(fn: (a: string) => void) {
+  fn("Hello, World");
+}
+
+function printToConsole(s: string) {
+  console.log(s);
+}
+
+greeter(printToConsole);
+
+let optionalCity: string | null = null;
+let optionalCountry: string | undefined = undefined;
+
+console.log ("City "+optionalCity + " country "+optionalCountry);
+
+if (optionalCity === null)
+{
+    optionalCity ="Roma";
+}
+if (optionalCountry === undefined)
+{
+    optionalCountry ="Italia";
+}
+
+
+console.log ("City "+optionalCity + " country "+optionalCountry);
