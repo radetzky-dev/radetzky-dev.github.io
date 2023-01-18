@@ -6,7 +6,7 @@ class WordCount extends HTMLHeadingElement {
 
     // count words in element's parent element
     const wcParent = this.parentNode;
-    console.log (wcParent);
+    //console.log (wcParent);
 
     function countWords(node) {
       const text = node.innerText || node.textContent;
