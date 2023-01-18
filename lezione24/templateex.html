@@ -51,12 +51,13 @@
             const tbody = document.querySelector("tbody");
             const template = document.querySelector('#productrow');
 
-            //TODO creare una funzione che clona e inserisce valori
-            //creare un array di valori che vengono inseriti tramite un ciclo
+            myProducts = ["53322323","54623254","525364346"];
+            myCodes = ["aaa","bbb","ccc"];
 
-
-            populateTable (tbody,template,"53562562","test");
-            populateTable (tbody,template,"535323262562","aaa");
+            for (let index = 0; index < myProducts.length; index++) {
+                const element = myProducts[index];
+                populateTable (tbody,template,myProducts[index],myCodes[index]);
+            }
 
         } else {
             // Find another way to add the rows to the table because
