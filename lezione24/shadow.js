@@ -1,5 +1,5 @@
 // Create a class for the element
-class WordCount extends HTMLParagraphElement {
+class WordCount extends HTMLHeadingElement {
   constructor() {
     // Always call super first in constructor
     super();
@@ -37,4 +37,4 @@ class WordCount extends HTMLParagraphElement {
 }
 
 // Define the new element
-customElements.define("word-count", WordCount, { extends: "p" });
+customElements.define("word-count", WordCount, { extends: "h1" });
