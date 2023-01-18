@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>TypeScript Greeter</title>
@@ -10,7 +10,16 @@
 <body>
     <div class="container">
         <main>
-            <div id="peopleData" class="row align-items-start"></div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Lista delle persone</h5>
+                        <div id="peopleData" class="row align-items-start"></div>
+                    </div>
+                </div>
+            </div>
+
             <div class="row align-items-start">
                 <div class="col">
                     <div class="card mb-3">
@@ -41,8 +50,9 @@
             e.preventDefault();
             e.stopPropagation();
             console.log("Bottone premuto");
-            greeter(new Person(e.target.elements[0].value, e.target.elements[1].value));
+            greeter(new Person(e.target.elements[0].value, e.target.elements[1].value, e.target.elements[2].value));
         });
     </script>
 </body>
+
 </html>
