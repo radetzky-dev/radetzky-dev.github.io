@@ -34,7 +34,7 @@
         </tr>
     </template>
     <script>
-
+        
         function populateTable(tbody, template, code, productName) {
             const clone = template.content.cloneNode(true);
             let td = clone.querySelectorAll("td");
@@ -51,12 +51,10 @@
             const tbody = document.querySelector("tbody");
             const template = document.querySelector('#productrow');
 
-            myProducts = ["53322323","54623254","525364346"];
-            myCodes = ["aaa","bbb","ccc"];
-
-            for (let index = 0; index < myProducts.length; index++) {
-                const element = myProducts[index];
-                populateTable (tbody,template,myProducts[index],myCodes[index]);
+            let myArray = { "5645562": "ddd", "323223": "fff", "111": "xxx", "6634763": "aaabc" };
+            for (var key in myArray) {
+                //console.log("key " + key + " has value " + myArray[key]);
+                populateTable(tbody, template, key, myArray[key]);
             }
 
         } else {
