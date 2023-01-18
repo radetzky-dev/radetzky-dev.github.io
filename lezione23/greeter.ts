@@ -13,9 +13,8 @@ class Person {
 }
 
 /**
- *
- * @param person
- * @returns
+ * 
+ * @param person 
  */
 function greeter(person: Person) {
   console.log("dati ricevuti:" + person.firstName + " " + person.lastName);
