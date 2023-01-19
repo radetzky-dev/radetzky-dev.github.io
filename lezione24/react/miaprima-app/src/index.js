@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import Container from "react-bootstrap/Container";
 
 function ingredientList(props) {
   console.log(props.items);
@@ -28,7 +29,16 @@ const primaRicetta =
 const secondaRicetta = "loren ipsum loren ipsum loren ipsum loren ipsum";
 const terzaRicetta = "loren ipsum loren ipsum loren ipsum loren ipsum";
 
-const photoRicettaUno ="https://www.giallozafferano.it/images/237-23742/Tiramisu_450x300.jpg";
+const photoRicettaUno =
+  "https://www.giallozafferano.it/images/237-23742/Tiramisu_450x300.jpg";
+
+function designBootstrap() {
+  return React.createElement(
+    "Container",
+    { className: "container text-center" },
+    React.createElement(threeColumns, null, null)
+  );
+}
 
 function threeColumns() {
   return React.createElement(
@@ -38,28 +48,40 @@ function threeColumns() {
       "div",
       { className: "colonna" },
       React.createElement("h1", null, "Il tiramisù"),
-      React.createElement("img", {src: photoRicettaUno, height: "200px",  width: "300px"}, null),
+      React.createElement(
+        "img",
+        { src: photoRicettaUno, height: "200px", width: "300px" },
+        null
+      ),
       React.createElement(ingredientList, { items: myIngredients }, null),
-      React.createElement("p", { className: "textclass" }, primaRicetta),
+      React.createElement("p", { className: "textclass" }, primaRicetta)
     ),
     React.createElement(
       "div",
       { className: "colonna" },
       React.createElement("h1", null, "La seconda ricetta"),
-      React.createElement("img", {src: photoRicettaUno, height: "200px",  width: "300px"}, null),
+      React.createElement(
+        "img",
+        { src: photoRicettaUno, height: "200px", width: "300px" },
+        null
+      ),
       React.createElement(ingredientList, { items: otherIngredients }, null),
-      React.createElement("p", { className: "textclass" }, secondaRicetta),
+      React.createElement("p", { className: "textclass" }, secondaRicetta)
     ),
     React.createElement(
       "div",
       { className: "colonna" },
       React.createElement("h1", null, "La terza ricetta"),
-      React.createElement("img", {src: photoRicettaUno, height: "200px",  width: "300px"}, null),
+      React.createElement(
+        "img",
+        { src: photoRicettaUno, height: "200px", width: "300px" },
+        null
+      ),
       React.createElement(ingredientList, { items: lastIngredients }, null),
-      React.createElement("p", { className: "textclass" }, terzaRicetta),
+      React.createElement("p", { className: "textclass" }, terzaRicetta)
     )
   );
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(React.createElement(threeColumns, null, null));
+root.render(React.createElement(designBootstrap, null, null));
