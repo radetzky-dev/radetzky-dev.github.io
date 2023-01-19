@@ -1,4 +1,4 @@
-export default function HelloWorld()
+export default function HelloWorld(props)
 {
-    return <p>Ciao mondo</p>;
+    return <p>Ciao {props.name}</p>;
 }

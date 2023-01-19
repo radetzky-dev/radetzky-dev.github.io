@@ -1,11 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
 import HelloWorld from './components/HelloWorld';
 
-function App() {
+function Ciao (props) {
+  return <p>Ciao, {props.name}</p>
+}
+
+
+function App() {  
   return (
     <div className="App">
-      <HelloWorld></HelloWorld>
+      <HelloWorld name="mondo"></HelloWorld>
+      <Ciao name="Paolo"></Ciao>
     </div>
   );
 }
