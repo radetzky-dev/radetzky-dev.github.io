@@ -23,3 +23,8 @@ code {
   font-family: 'Times New Roman', Times, serif;
   font-size: medium;
 }
+
+.textheader {
+  font-weight: bold;
+  color:red;
+}
