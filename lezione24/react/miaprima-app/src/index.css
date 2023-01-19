@@ -28,3 +28,10 @@ code {
   font-weight: bold;
   color:red;
 }
+
+.colonna {
+  color: red;
+  display: flex;
+  border: chocolate solid 2px;
+  margin: 5px;
+}
