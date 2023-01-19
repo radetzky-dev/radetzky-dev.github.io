@@ -29,9 +29,16 @@ code {
   color:red;
 }
 
-.colonna {
+.tabella {
   color: red;
   display: flex;
   border: chocolate solid 2px;
   margin: 5px;
+}
+
+.colonna {
+  margin: 10px 10px;
+  color: blue;
+  display: inline;
+  border: aqua 1px solid;
 }
