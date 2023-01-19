@@ -7,9 +7,7 @@ function TestMio() {
       <header className="App-header">
         <h2>Ciao Mondo</h2>
         <p>
-          <script>
-            console.log ("Scrivo");
-          </script>
+          Uso react!
         </p>
       </header>
     </div>

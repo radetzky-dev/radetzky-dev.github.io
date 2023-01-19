@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.listclass {
+  font-weight: 600;
+  color:brown;
+}
+
+.textclass {
+  font-weight: normal;
+  color:blue;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: medium;
+}

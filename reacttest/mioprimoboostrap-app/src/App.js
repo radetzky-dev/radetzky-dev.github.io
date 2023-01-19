@@ -15,7 +15,7 @@ const ExampleToast = ({ children }) => {
       {!show && <Button onClick={() => toggleShow(true)}>Mostra Toast</Button>}
       <Toast show={show} onClose={() => toggleShow(false)}>
         <Toast.Header>
-          <strong className="mr-auto">React-Bootstrap</strong>
+          <strong className="mr-auto">Header del toast</strong>
         </Toast.Header>
         <Toast.Body>{children}
         </Toast.Body>
@@ -27,13 +27,14 @@ const ExampleToast = ({ children }) => {
 const App = () => (
   <Container className="p-3">
     <Container className="p-5 mb-4 bg-light rounded-3">
-      <h1 className="header">Welcome To React-Bootstrap</h1>
+      <h1 className="header">Benvenuto nel primo esempio di React</h1>
+      <p>Questo testo esterno</p>
       <ExampleToast>
-        We now have Toasts
+        Figli del toast! 
         <span role="img" aria-label="tada">
           🎉
         </span>
-        <p>Ciao dal box!</p>
+        <p>Ciao dal contenuto del box!</p>
       </ExampleToast>
     </Container>
   </Container>
