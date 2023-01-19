@@ -7,7 +7,9 @@ function TestMio() {
       <header className="App-header">
         <h2>Ciao Mondo</h2>
         <p>
-          Mia prova
+          <script>
+            console.log ("Scrivo");
+          </script>
         </p>
       </header>
     </div>
