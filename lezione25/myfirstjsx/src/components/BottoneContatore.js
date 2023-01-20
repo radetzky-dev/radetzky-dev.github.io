@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "react-bootstrap/Button"; 
 
 class BottoneContatore extends React.Component {
     constructor(props) {
@@ -14,12 +15,12 @@ class BottoneContatore extends React.Component {
         <div>
           <p>You clicked {this.state.count} add</p>
           <p>You clicked {this.state.negativ} negativ</p>
-          <button onClick={() => this.setState({ count: this.state.count + 1 })}>
+          <Button onClick={() => this.setState({ count: this.state.count + 1 })}>
             +
-          </button>
-          <button onClick={() => this.setState({ negativ: this.state.negativ - 1 })}>
+          </Button>
+          <Button onClick={() => this.setState({ negativ: this.state.negativ - 1 })}>
             -
-          </button>
+          </Button>
         </div>
       );
     }

@@ -1,4 +1,5 @@
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import HelloWorld from "./components/HelloWorld";
 import Orologio from "./components/Orologio";
 import BottoneContatore from "./components/BottoneContatore";
@@ -7,27 +8,15 @@ import Counter from "./Counter";
 
 function App() {
   return (
-    <div className="App">
-      <table>
-        <tr>
-          <td>
-            <HelloWorld name="mondo"></HelloWorld>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <BottoneContatore></BottoneContatore>
-            <Esempio></Esempio>
-          </td>
-        </tr>
-      </table>
-      <p>ciao</p>
-      <div>
+    <div class="container">
+      <div class="text-center mt-5">
+        <HelloWorld name="mondo"></HelloWorld>
+        <p class="lead">A complete project boilerplate built with Bootstrap</p>
+        <BottoneContatore></BottoneContatore>
+        <Esempio></Esempio>
         <Counter></Counter>
-      </div>
-      <main>
         <Orologio></Orologio>
-      </main>
+      </div>
     </div>
   );
 }
