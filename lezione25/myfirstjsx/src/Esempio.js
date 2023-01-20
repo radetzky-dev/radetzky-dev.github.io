@@ -1,26 +1,29 @@
-import { Alert } from "bootstrap";
 import React, { useState, useEffect } from "react";
 
-function writeConsole(count)
-{
-  console.log ("Hai premuto il bottone "+count);
-}
-
-
 function Esempio() {
-  const [count, setCount] = useState(0);
+  const names = ["piero", "maria", "giovanni"];
+  const [mario, setMario] = useState("mario");
+
+  function writeConsole(name) {
+    console.log("Hai premuto il bottone " + name);
+  }
 
   useEffect(() => {
-    document.title = `Hai cliccato ${count} volte`;
-    return()=> {
-      writeConsole(count);
-    }
+    document.title = `Ciao ${mario} `;
+    return () => {
+      writeConsole(mario);
+    };
   });
+
+  function saluta() {
+    let index = Math.floor(Math.random() * names.length);
+    setMario(names[index]);
+  }
 
   return (
     <div>
       <p>Questo è un esempio</p>
-      <button onClick={() => setCount(count + 1)}>Clicca</button>
+      <button onClick={saluta}>Clicca</button>
     </div>
   );
 }
