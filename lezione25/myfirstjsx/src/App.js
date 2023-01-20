@@ -15,7 +15,7 @@ function App() {
         <BottoneContatore></BottoneContatore>
         <Esempio></Esempio>
         <Counter></Counter>
-        <Orologio></Orologio>
+       
       </div>
     </div>
   );
