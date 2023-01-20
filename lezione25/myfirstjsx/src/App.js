@@ -1,14 +1,13 @@
-import './App.css';
-import HelloWorld from './components/HelloWorld';
-import Orologio from './components/Orologio';
+import "./App.css";
+import HelloWorld from "./components/HelloWorld";
+//import Orologio from "./components/Orologio";
+import BottoneContatore from "./components/BottoneContatore";
 
-
-
-function App() {  
+function App() {
   return (
     <div className="App">
       <HelloWorld name="mondo"></HelloWorld>
-      <Orologio></Orologio>
+      <BottoneContatore></BottoneContatore>
     </div>
   );
 }
