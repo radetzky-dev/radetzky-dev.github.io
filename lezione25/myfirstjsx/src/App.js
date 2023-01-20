@@ -5,6 +5,7 @@ import Orologio from "./components/Orologio";
 import BottoneContatore from "./components/BottoneContatore";
 import Esempio from "./Esempio";
 import Counter from "./Counter";
+import CounterReducer from "./CounterReducer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <BottoneContatore></BottoneContatore>
         <Esempio></Esempio>
         <Counter></Counter>
+        <CounterReducer></CounterReducer>
        
       </div>
     </div>
